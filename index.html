@@ -8,7 +8,50 @@
 
   <body>
     <!-- Шапка файла -->
-    <header>Шапка файла</header>
+    <header class="header">
+      <div class="header__wrapper">
+        <button class="header__logo" type="button" id="logo">
+          <img src="./assets/icons/logo.svg" alt="ZEN" />
+        </button>
+        <ul class="menu" id="menu">
+          <!-- Item 1 -->
+          <li class="menu__item">
+            <a href="#download">Download</a>
+          </li>
+          <!-- Item 2 -->
+          <li class="menu__item">
+            <a href="#warranty">Warranty</a>
+          </li>
+          <!-- Item 3 -->
+          <li class="menu__item">
+            <a href="#care">Care</a>
+          </li>
+          <!-- Item 4 -->
+          <li class="menu__item">
+            <a href="#cashback">Cashback</a>
+          </li>
+          <!-- Item 5 -->
+          <li class="menu__item">
+            <a href="#clients">Clients</a>
+          </li>
+        </ul>
+        <div class="header__actions">
+          <!-- Lang -->
+          <select class="header__lang" id="lang">
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+          </select>
+          <!-- Theme -->
+          <button class="header__theme" type="button" id="theme">
+            <img src="./assets/icons/moon.svg" alt="Moon" />
+          </button>
+          <!-- Burger -->
+          <button class="header__burger" type="button" id="burger">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
     <!-- Секция 1 -->
     <section class="download" id="download">
       <div class="download__wrapper">
