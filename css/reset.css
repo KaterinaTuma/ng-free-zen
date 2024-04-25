@@ -1,20 +1,10 @@
-/*  */
 * {
   margin: 0;
   padding: 0;
-  margin-block: 0;
-  padding-block: 0;
-  padding-inline: 0;
 }
 
-button,
-input,
-select {
-  border: none;
-  background: none;
-}
-
-ul {
+ul,
+ol {
   list-style: none;
 }
 
@@ -23,10 +13,28 @@ a {
   color: inherit;
 }
 
+button {
+  color: inherit;
+  font-size: inherit;
+  background: none;
+  border: none;
+}
+
+select {
+  border: none;
+  appearance: none;
+}
+
 h1,
 h2,
 h3,
-p {
-  font-size: 100%;
-  font-weight: normal;
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  font-size: inherit;
+}
+
+img {
+  width: 100%;
 }
