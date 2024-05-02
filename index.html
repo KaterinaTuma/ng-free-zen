@@ -6,6 +6,8 @@
     <title>Zen</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/burger.css">
   </head>
 
   <body>
@@ -41,16 +43,19 @@
         </nav>
         <div class="header__actions">
           <!-- Lang -->
-          <select class="header__lang" id="lang">
-            <option value="en">EN</option>
-            <option value="ru">RU</option>
-          </select>
+          <label class="header__lang">
+            <img src="assets/icons/arrow-down.svg" alt="">
+            <select id="lang">
+              <option value="en">EN</option>
+              <option value="ru">RU</option>
+            </select>
+          </label>
           <!-- Theme -->
           <button class="header__theme" type="button" id="theme">
             <img src="./assets/icons/moon.svg" alt="Moon" />
           </button>
           <!-- Burger -->
-          <button class="header__burger" type="button" id="burger">
+          <button class="burger" type="button" id="burger">
             <span></span>
           </button>
         </div>
