@@ -1,10 +1,17 @@
 .header {
-  padding: 10px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
   border-bottom: 1px solid #AAA;
 }
 
 .header__wrapper {
+  height: 50px;
+  padding: 0 15px;
   display: flex;
+  align-items: center;
 }
 
 .header__logo {
