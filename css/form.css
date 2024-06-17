@@ -40,8 +40,24 @@
 }
 
 .form__checkbox {
-  display: none;
-  border: 1px dashed grey;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.form__checkbox input::before {
+  display: block;
+  content: '';
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1px solid #aaa;
+}
+
+.form__checkbox input:checked::before {
+  background-image: url('../assets/icons/check.svg');
+  background-position: center;
+  border-color: #00a1ff;
 }
 
 .form__submit {
