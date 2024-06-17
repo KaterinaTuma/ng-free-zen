@@ -13,16 +13,11 @@ h4,
 h5,
 h6 {
   font-size: inherit;
-  font-weight: 400;
 }
 
 ul,
 ol {
   list-style: none;
-}
-
-img {
-  width: 100%;
 }
 
 a {
@@ -42,4 +37,5 @@ input {
   background: none;
   appearance: none;
   border: none;
+  outline: none;
 }
