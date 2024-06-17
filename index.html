@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/warranty.css">
     <link rel="stylesheet" href="css/care.css">
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/column.css">
     <link rel="stylesheet" href="css/footer.css">
   </head>
@@ -286,7 +287,7 @@
       </div>
     </footer>
     <!-- Модальное окно -->
-    <div class="modal" id="modal">
+    <div class="modal active" id="modal">
       <div class="modal__body">
         <!-- Close -->
         <button class="modal__close" id="close">
@@ -295,26 +296,27 @@
         <!-- Title -->
         <h3 class="modal__title">Order a consultation</h3>
         <!-- Form -->
-        <form class="form" style="display:none" id="order">
+        <form class="form" id="order">
           <!-- Name -->
-          <label class="form__input">
-            <span>Name</span>
-            <input type="text" id="name" />
+          <label class="form__field">
+            <!-- <span>Name</span> -->
+            <input type="text" placeholder="Name" id="name" />
           </label>
           <!-- Tel -->
-          <label class="form__input">
-            <span>Tel.</span>
-            <input type="tel" id="tel" />
+          <label class="form__field">
+            <!-- <span>Tel.</span> -->
+            <input type="tel" placeholder="Tel." id="tel" />
           </label>
           <!-- E-mail -->
-          <label class="form__input">
-            <span>E-mail</span>
-            <input type="email" id="email" />
+          <label class="form__field">
+            <!-- <span>E-mail</span> -->
+            <input type="email" placeholder="E-mail" id="email" />
           </label>
           <!-- Connection -->
-          <label class="form__select">
+          <label class="form__field">
             <span>Connection</span>
             <select id="connection">
+              <option value=""></option>
               <option value="telegram">Telegram</option>
               <option value="whatsapp">WhatsApp</option>
             </select>
