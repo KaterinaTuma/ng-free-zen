@@ -1,0 +1,14 @@
+.clients {
+  padding: 30px 15px;
+}
+
+/* .clients__wrapper {} */
+
+.clients__brands {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  place-items: center;
+}
+
+/* .clients__brand {} */
