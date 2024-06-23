@@ -1,0 +1,49 @@
+/*download*/
+.download {
+  padding: 30px 15px;
+}
+
+.download__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.download__text-block {}
+
+.download__title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.download__copy {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.download__links {
+  margin-top: 20px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.download__link {
+  display: block;
+  width: 150px;
+  height: 44px;
+}
+
+.download__image-block {
+  height: 72vw;
+  border: 1px solid #AAA;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.download__image-block img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
