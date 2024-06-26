@@ -1,0 +1,573 @@
+/*reset*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+select,
+input {
+  background: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+/*fonts*/
+@font-face {
+  font-family: "Nunito";
+  src: url("../assets/fonts/Nunito/Nunito-Regular.woff2") format("woff2");
+  src: url("../assets/fonts/Nunito/Nunito-Regular.woff") format("woff");
+  src: url("../assets/fonts/Nunito/Nunito-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito";
+  src: url("../assets/fonts/Nunito/Nunito-Bold.woff2") format("woff2");
+  src: url("../assets/fonts/Nunito/Nunito-Bold.woff") format("woff");
+  src: url("../assets/fonts/Nunito/Nunito-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/*global*/
+body {
+  padding-top: 50px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+input {
+  font: inherit;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+}
+
+/*menu*/
+.menu {
+  display: none;
+}
+
+.menu.active {
+  display: block;
+  position: fixed;
+  top: 51px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+}
+
+.menu__item {
+  padding: 24px 15px;
+  font-size: 24px;
+  border-bottom: 1px solid #AAA;
+}
+
+/*burger*/
+.burger {
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.burger::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+}
+
+.burger::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.burger.active::before {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.burger.active span {
+  display: none;
+}
+
+.burger.active::after {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+/*form*/
+.form {
+  display: grid;
+  gap: 15px;
+}
+
+.form__field {
+  height: 30px;
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #aaa;
+}
+
+.form__field input {
+  display: block;
+  width: 100%;
+  padding: 5px;
+}
+
+.form__field input::placeholder {
+  font-size: 16px;
+  color: #aaa;
+}
+
+.form__field span {
+  font-size: 16px;
+  left: 5px;
+  bottom: 4px;
+  position: absolute;
+  color: #aaa;
+  z-index: 0;
+}
+
+.form__field select {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  z-index: 1;
+  position: relative;
+}
+
+.form__checkbox {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.form__checkbox input::before {
+  display: block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1px solid #aaa;
+}
+
+.form__checkbox input:checked::before {
+  background-image: url("../assets/icons/check.svg");
+  background-position: center;
+  border-color: #00a1ff;
+}
+
+.form__submit {
+  margin-top: 5px;
+  padding-block: 12px;
+  border: 1px solid #222;
+  border-radius: 30px;
+}
+
+/*column*/
+/* .column {} */
+.column__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.column__list {
+  display: grid;
+  gap: 10px;
+}
+
+.column__item {
+  font-size: 14px;
+}
+
+.column__item img {
+  width: 40px;
+  height: 40px;
+}
+
+/*header*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid #AAA;
+}
+
+.header__wrapper {
+  height: 50px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  width: 77px;
+  height: 30px;
+}
+
+.header__logo img {
+  height: 100%;
+}
+
+/* .header__nav {} */
+.header__actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header__lang {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 30px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.header__lang img {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 6px;
+  pointer-events: none;
+}
+
+.header__lang select {
+  padding-left: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.header__theme {
+  width: 26px;
+  height: 26px;
+}
+
+/*download*/
+.download {
+  padding: 30px 15px;
+}
+
+.download__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.download__title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.download__copy {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.download__links {
+  margin-top: 20px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.download__link {
+  display: block;
+  width: 150px;
+  height: 44px;
+}
+
+.download__image-block {
+  height: 72vw;
+  border: 1px solid #AAA;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.download__image-block img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*cashback*/
+.cashback {
+  padding: 30px 15px;
+}
+
+/* .cashback__wrapper {} */
+/* .cashback__text-block {} */
+.cashback__title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.cashback__copy {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.cashback__copy:first-of-type {
+  margin-top: 20px;
+}
+
+.cashback__button {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border: 1px solid #AAAAAA;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+/*clients*/
+.clients {
+  padding: 30px 15px;
+}
+
+/* .clients__wrapper {} */
+.clients__brands {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  place-items: center;
+}
+
+/* .clients__brand {} */
+/*warranty*/
+.warranty {
+  padding: 30px 15px;
+}
+
+.warranty__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* .warranty__text-block {} */
+.warranty__title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.warranty__copy {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.warranty__copy:first-of-type {
+  margin-top: 20px;
+}
+
+.warranty__image-block {
+  height: 72vw;
+  border: 1px solid #AAA;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.warranty__image-block img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*care*/
+.care {
+  padding: 30px 15px;
+}
+
+.care__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* .care__text-block {} */
+.care__title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.care__copy {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.care__copy:first-of-type {
+  margin-top: 20px;
+}
+
+.care__image-block {
+  height: 72vw;
+  border: 1px solid #AAA;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.care__image-block img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*modal*/
+.modal {
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal.active {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__body {
+  position: relative;
+  width: calc(100vw - 30px);
+  padding: 30px 20px;
+  display: grid;
+  gap: 20px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.modal__close {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: -34px;
+  right: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__close img {
+  flex-basis: content;
+}
+
+.modal__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/*footer*/
+.footer {
+  padding: 30px 15px;
+  color: #ffffff;
+  background: #484848;
+}
+
+.footer__wrapper {
+  display: grid;
+  gap: 30px;
+}
+
+.footer__columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.footer__info {
+  display: grid;
+  gap: 10px;
+}
+
+.footer__logo {
+  width: 216px;
+  height: 23px;
+}
+
+.footer__copy {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.footer__dev {
+  justify-self: center;
+  width: 130px;
+  height: 46px;
+}
+
+/*# sourceMappingURL=style.css.map */
