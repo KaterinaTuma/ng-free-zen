@@ -24,6 +24,11 @@
   gap: 20px;
   border-radius: 5px;
   background: #fff;
+
+  @media (min-width: $breakpoint-md) {
+    width: 290px;
+    transition: all 1s;
+  }
 }
 
 .modal__close {
