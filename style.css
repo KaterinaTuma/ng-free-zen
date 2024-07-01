@@ -41,6 +41,25 @@ input {
   outline: none;
 }
 
+.app.light {
+  --color-primary: #000000;
+  --bg-color-primary: #ffffff;
+  --bg-color-image: #aaaaaa;
+  --bg-color-footer: #484848;
+  --border-color: #aaaaaa;
+}
+.app.dark {
+  --color-primary: #ffffff;
+  --bg-color-primary: #484848;
+  --bg-color-image: #ffffff;
+  --bg-color-footer: #484848;
+  --border-color: #ffffff;
+}
+
+/*colors*/
+/*breakpoint*/
+/*paddings*/
+/*border*/
 /*fonts*/
 @font-face {
   font-family: "Nunito";
@@ -65,7 +84,6 @@ body {
   padding-top: 50px;
   font-family: "Nunito", sans-serif;
   font-size: 14px;
-  font-weight: 400;
 }
 
 input {
@@ -509,6 +527,12 @@ img {
   gap: 20px;
   border-radius: 5px;
   background: #fff;
+}
+@media (min-width: 768px) {
+  .modal__body {
+    width: 290px;
+    transition: all 1s;
+  }
 }
 
 .modal__close {

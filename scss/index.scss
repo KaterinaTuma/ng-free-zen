@@ -1,5 +1,7 @@
-@import 'utils/mixins';
 @import 'config/reset';
+@import 'utils/mixins';
+@import 'config/theme-vars';
+@import 'config/common-vars';
 @import 'config/fonts';
 @import 'config/global';
 @import 'features/menu';
