@@ -1,15 +1,15 @@
 /*clients*/
 .clients {
   padding: 30px 15px;
+
+  /* &__wrapper {} */
+
+  &__brands {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    place-items: center;
+  }
+
+  /* &__brand {} */
 }
-
-/* .clients__wrapper {} */
-
-.clients__brands {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  place-items: center;
-}
-
-/* .clients__brand {} */
