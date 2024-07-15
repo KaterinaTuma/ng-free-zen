@@ -5,6 +5,11 @@ body {
   font-size: 14px;
 }
 
+.app {
+  color: var(--color-primary);
+  background: var(--bg-color-primary);
+}
+
 input {
   font: inherit;
   font-size: 16px;
