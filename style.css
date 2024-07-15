@@ -47,6 +47,7 @@ input {
   --bg-color-image: #aaaaaa;
   --bg-color-footer: #484848;
   --border-color: #aaaaaa;
+  --border-color-lang: #000000;
 }
 .app.dark {
   --color-primary: #ffffff;
@@ -54,6 +55,7 @@ input {
   --bg-color-image: #ffffff;
   --bg-color-footer: #484848;
   --border-color: #ffffff;
+  --border-color-lang: #ffffff;
 }
 
 /*breakpoint*/
@@ -132,7 +134,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 0.5s;
+  transition: transform 0.5s;
 }
 .burger span {
   display: block;
@@ -149,7 +151,7 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: all 0.5s;
+  transition: transform 0.5s;
 }
 .burger.active::before {
   top: 50%;
@@ -199,12 +201,12 @@ img {
   z-index: 1;
   position: relative;
 }
-.form__checkbox {
+.form__policy {
   display: flex;
   gap: 15px;
   align-items: center;
 }
-.form__checkbox input::before {
+.form__policy input::before {
   display: block;
   content: "";
   width: 14px;
@@ -212,7 +214,7 @@ img {
   border-radius: 2px;
   border: 1px solid #aaa;
 }
-.form__checkbox input:checked::before {
+.form__policy input:checked::before {
   background-image: url("../assets/icons/check.svg");
   background-position: center;
   border-color: #00a1ff;
@@ -250,7 +252,7 @@ img {
   right: 0;
   color: var(--color-primary);
   background: var(--bg-color-primary);
-  border-bottom: 1px solid #AAA;
+  border-bottom: 1px solid #aaa;
   /* &__nav {} */
 }
 .header__wrapper {
@@ -263,7 +265,7 @@ img {
   width: 77px;
   height: 30px;
 }
-.header__logo img {
+.header__logo svg {
   height: 100%;
 }
 .header__actions {
@@ -278,11 +280,11 @@ img {
   align-items: center;
   width: 50px;
   height: 30px;
-  border: 1px solid #000;
+  border: 1px solid var(--border-color-lang);
   border-radius: 4px;
   overflow: hidden;
 }
-.header__lang img {
+.header__lang svg {
   position: absolute;
   right: 8px;
   top: 50%;
@@ -295,6 +297,8 @@ img {
   padding-left: 8px;
   width: 100%;
   height: 100%;
+  color: var(--color-primary);
+  background: var(--bg-color-primary);
 }
 .header__theme {
   width: 26px;
