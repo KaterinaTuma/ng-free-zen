@@ -46,20 +46,24 @@ input {
   --bg-color-primary: #ffffff;
   --bg-color-image: #aaaaaa;
   --bg-color-footer: #484848;
-  --border-color: #aaaaaa;
+  --bg-color-link: #222222;
+  --border-color-default: #aaaaaa;
+  --border-color-lang: #000000;
+  --border-color-image: #aaaaaa;
 }
 .app.dark {
   --color-primary: #ffffff;
   --bg-color-primary: #484848;
   --bg-color-image: #ffffff;
   --bg-color-footer: #484848;
-  --border-color: #ffffff;
+  --bg-color-link: none;
+  --border-color-default: #ffffff;
+  --border-color-lang: #ffffff;
+  --border-color-image: #484848;
 }
 
-/*colors*/
 /*breakpoint*/
 /*paddings*/
-/*border*/
 /*fonts*/
 @font-face {
   font-family: "Nunito";
@@ -84,6 +88,11 @@ body {
   padding-top: 50px;
   font-family: "Nunito", sans-serif;
   font-size: 14px;
+}
+
+.app {
+  color: var(--color-primary);
+  background: var(--bg-color-primary);
 }
 
 input {
@@ -124,28 +133,28 @@ img {
   display: block;
   width: 100%;
   height: 2px;
-  background: #000000;
+  background: var(--color-primary);
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 0.5s;
+  transition: transform 0.5s;
 }
 .burger span {
   display: block;
   width: 100%;
   height: 2px;
-  background: #000000;
+  background: var(--color-primary);
 }
 .burger::after {
   content: "";
   display: block;
   width: 100%;
   height: 2px;
-  background: #000000;
+  background: var(--color-primary);
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: all 0.5s;
+  transition: transform 0.5s;
 }
 .burger.active::before {
   top: 50%;
@@ -195,12 +204,12 @@ img {
   z-index: 1;
   position: relative;
 }
-.form__checkbox {
+.form__policy {
   display: flex;
   gap: 15px;
   align-items: center;
 }
-.form__checkbox input::before {
+.form__policy input::before {
   display: block;
   content: "";
   width: 14px;
@@ -208,7 +217,7 @@ img {
   border-radius: 2px;
   border: 1px solid #aaa;
 }
-.form__checkbox input:checked::before {
+.form__policy input:checked::before {
   background-image: url("../assets/icons/check.svg");
   background-position: center;
   border-color: #00a1ff;
@@ -244,8 +253,9 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  background: #fff;
-  border-bottom: 1px solid #AAA;
+  color: var(--color-primary);
+  background: var(--bg-color-primary);
+  border-bottom: 1px solid var(--border-color-default);
   /* &__nav {} */
 }
 .header__wrapper {
@@ -258,7 +268,7 @@ img {
   width: 77px;
   height: 30px;
 }
-.header__logo img {
+.header__logo svg {
   height: 100%;
 }
 .header__actions {
@@ -273,11 +283,11 @@ img {
   align-items: center;
   width: 50px;
   height: 30px;
-  border: 1px solid #000;
+  border: 1px solid var(--border-color-lang);
   border-radius: 4px;
   overflow: hidden;
 }
-.header__lang img {
+.header__lang svg {
   position: absolute;
   right: 8px;
   top: 50%;
@@ -290,6 +300,8 @@ img {
   padding-left: 8px;
   width: 100%;
   height: 100%;
+  color: var(--color-primary);
+  background: var(--bg-color-primary);
 }
 .header__theme {
   width: 26px;
@@ -325,9 +337,12 @@ img {
   width: 150px;
   height: 44px;
 }
+.download__link svg {
+  fill: var(--bg-color-link);
+}
 .download__image-block {
   height: 72vw;
-  border: 1px solid #AAA;
+  border: 1px solid var(--border-color-image);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -362,7 +377,7 @@ img {
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  border: 1px solid #AAAAAA;
+  border: 1px solid var(--border-color-default);
   border-radius: 30px;
   margin-top: 20px;
 }
@@ -371,13 +386,16 @@ img {
 .clients {
   padding: 30px 15px;
   /* &__wrapper {} */
-  /* &__brand {} */
 }
 .clients__brands {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   place-items: center;
+  color: var(--color-primary);
+}
+.clients__brand svg {
+  width: 130px;
 }
 
 /*warranty*/
