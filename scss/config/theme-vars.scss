@@ -7,9 +7,12 @@
     --bg-color-primary: #ffffff;
     --bg-color-image: #aaaaaa;
     --bg-color-footer: #484848;
+    --bg-color-link: #222222;
 
     // border-color:
-    --border-color: #aaaaaa;
+    --border-color-default: #aaaaaa;
+    --border-color-lang: #000000;
+    --border-color-image: #aaaaaa;
   }
 
   &.dark {
@@ -20,8 +23,11 @@
     --bg-color-primary: #484848;
     --bg-color-image: #ffffff;
     --bg-color-footer: #484848;
+    --bg-color-link: none;
 
     // border-color:
-    --border-color: #ffffff;
+    --border-color-default: #ffffff;
+    --border-color-lang: #ffffff;
+    --border-color-image: #484848;
   }
 }
