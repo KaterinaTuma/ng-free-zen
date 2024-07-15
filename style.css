@@ -46,21 +46,24 @@ input {
   --bg-color-primary: #ffffff;
   --bg-color-image: #aaaaaa;
   --bg-color-footer: #484848;
-  --border-color: #aaaaaa;
+  --bg-color-link: #222222;
+  --border-color-default: #aaaaaa;
   --border-color-lang: #000000;
+  --border-color-image: #aaaaaa;
 }
 .app.dark {
   --color-primary: #ffffff;
   --bg-color-primary: #484848;
   --bg-color-image: #ffffff;
   --bg-color-footer: #484848;
-  --border-color: #ffffff;
+  --bg-color-link: none;
+  --border-color-default: #ffffff;
   --border-color-lang: #ffffff;
+  --border-color-image: #484848;
 }
 
 /*breakpoint*/
 /*paddings*/
-/*border*/
 /*fonts*/
 @font-face {
   font-family: "Nunito";
@@ -252,7 +255,7 @@ img {
   right: 0;
   color: var(--color-primary);
   background: var(--bg-color-primary);
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid var(--border-color-default);
   /* &__nav {} */
 }
 .header__wrapper {
@@ -334,9 +337,12 @@ img {
   width: 150px;
   height: 44px;
 }
+.download__link svg {
+  fill: var(--bg-color-link);
+}
 .download__image-block {
   height: 72vw;
-  border: 1px solid #AAA;
+  border: 1px solid var(--border-color-image);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -371,7 +377,7 @@ img {
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  border: 1px solid #AAAAAA;
+  border: 1px solid var(--border-color-default);
   border-radius: 30px;
   margin-top: 20px;
 }
@@ -380,13 +386,16 @@ img {
 .clients {
   padding: 30px 15px;
   /* &__wrapper {} */
-  /* &__brand {} */
 }
 .clients__brands {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   place-items: center;
+  color: var(--color-primary);
+}
+.clients__brand svg {
+  width: 130px;
 }
 
 /*warranty*/

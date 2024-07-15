@@ -9,7 +9,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     place-items: center;
+    color: var(--color-primary);
   }
 
-  /* &__brand {} */
+  &__brand svg {
+    width: 130px;
+  }
 }

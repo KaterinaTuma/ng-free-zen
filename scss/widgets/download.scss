@@ -32,11 +32,15 @@
     display: block;
     width: 150px;
     height: 44px;
+
+    & svg {
+      fill: var(--bg-color-link);
+    }
   }
 
   &__image-block {
     height: 72vw;
-    border: 1px solid #AAA;
+    border: 1px solid var(--border-color-image);
     border-radius: 20px;
     overflow: hidden;
 
