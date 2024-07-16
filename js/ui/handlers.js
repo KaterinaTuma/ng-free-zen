@@ -18,3 +18,15 @@ export const handleThemeButtonClick = (event) => {
     $app.classList.add('light');
   }
 };
+
+export const handleBurgerButtonClick=(event) => {
+  const $burgerButton = event.currentTarget;
+  const $menu = document.querySelector('#menu');
+  if($burgerButton.classList.contains('active')) {
+    $burgerButton.classList.remove('active');
+    $menu.classList.remove('active');
+  } else {
+    $burgerButton.classList.add('active');
+    $menu.classList.add('active');
+  }
+}
