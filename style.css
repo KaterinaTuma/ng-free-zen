@@ -114,12 +114,12 @@ img {
   top: 51px;
   left: 0;
   width: 100%;
-  background: #fff;
+  background: var(--bg-color-primary);
 }
 .menu__item {
   padding: 24px 15px;
   font-size: 24px;
-  border-bottom: 1px solid #AAA;
+  border-bottom: 1px solid var(--border-color-default);
 }
 
 /*burger*/
