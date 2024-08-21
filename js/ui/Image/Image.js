@@ -8,8 +8,9 @@
  * @returns {string} HTML
  */
 
-export const Image = (data) => {
-  return `
-    <img src="${data.source}" alt="${data.description}" />
-  `;
-};
+export const Image = (data) => `
+  <img
+    src="${data.source}"
+    alt="${data.description}"
+  />
+`;
