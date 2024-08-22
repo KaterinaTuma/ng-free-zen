@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /**
  * @function IconGoogle
  * @returns {string} HTML

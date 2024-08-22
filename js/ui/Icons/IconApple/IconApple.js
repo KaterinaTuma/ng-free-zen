@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /**
  * @function IconApple
  * @returns {string} HTML
