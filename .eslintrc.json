@@ -68,7 +68,7 @@
     "max-nested-callbacks": ["error", { "max": 5 }],
     "new-cap": [
       "error",
-      { "newIsCap": true, "capIsNew": true, "properties": true }
+      { "newIsCap": true, "capIsNew": false, "properties": true }
     ],
     "new-parens": ["error"],
     "no-lonely-if": ["error"],
