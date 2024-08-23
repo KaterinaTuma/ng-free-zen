@@ -1,4 +1,3 @@
-import { IconArrowDown } from '../../ui/Icons/IconArrowDown/index.js';
 import { Select } from '../../ui/Select/index.js';
 
 /**
@@ -12,6 +11,5 @@ import { Select } from '../../ui/Select/index.js';
  */
 
 export const Lang = (data) => `
-  ${IconArrowDown()}
   ${Select(data, 'lang')}
 `;
