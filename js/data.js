@@ -2,12 +2,12 @@ export const data = {
   primaryInfo: {
     langs: [
       {
-        name: 'RU',
-        key: 'ru',
-      },
-      {
         name: 'EN',
         key: 'en',
+      },
+      {
+        name: 'RU',
+        key: 'ru',
       },
     ],
     navigation: [
