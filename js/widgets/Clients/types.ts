@@ -3,7 +3,7 @@ type BrandLogoData = {
   darkSource: string;
 }
 
-type BrandData = {
+export type BrandData = {
   name: string;
   logo: BrandLogoData;
 }
