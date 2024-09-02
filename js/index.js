@@ -19,6 +19,5 @@ $root?.insertAdjacentHTML('beforeend', Clients(data.clients));
 $root?.insertAdjacentHTML('beforeend', Footer(data.secondaryInfo));
 
 const $themeButton = document.querySelector('#theme');
-$themeButton?.addEventListener('click', (event)  => {
-  handleThemeClick(event, data.clients.brands);
-});
+$themeButton?.addEventListener('click', (event) =>
+  handleThemeClick(event, data.clients.brands));

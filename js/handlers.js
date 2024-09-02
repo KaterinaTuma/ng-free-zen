@@ -7,12 +7,14 @@ import { IconMoon } from './ui/Icons/IconMoon/index.js';
 
 /**
  *@function handleThemeClick
- * @param {MouseEvent} event
- * @param {BrandData} brandsData
+ * @param {Event} event
+ * @param {BrandData[]} brandsData
  */
 
 export const handleThemeClick = (event, brandsData) => {
   const $root = document.querySelector('#root');
+
+  /** @type {NodeListOf<HTMLImageElement>} */
   const $brands = document.querySelectorAll('[data-id="brand"]');
 
   /** @type { * | EventTarget } */
@@ -25,7 +27,6 @@ export const handleThemeClick = (event, brandsData) => {
     $root?.classList.remove('light');
     $root?.classList.add('dark');
     $brands.forEach((brand, index) => {
-      brand.src = '';
       brand.src = brandsData[index].logo.darkSource;
     });
   };
@@ -36,7 +37,6 @@ export const handleThemeClick = (event, brandsData) => {
     $root?.classList.remove('dark');
     $root?.classList.add('light');
     $brands.forEach((brand, index) => {
-      brand.src = '';
       brand.src = brandsData[index].logo.lightSource;
     });
   };
