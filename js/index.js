@@ -7,7 +7,8 @@ import { Clients } from './widgets/Clients/Clients.js';
 import { Footer } from './widgets/Footer/Footer.js';
 import { dataFromAPI } from './dataFromAPI.js';
 import { onThemeClick } from './handlers.js';
-import { handleBurgerClick } from './handlers.js';
+import { toggleNavigation } from './handlers.js';
+import { handleNavLinkClick } from './handlers.js';
 
 const $root = document.querySelector('#root');
 
@@ -23,4 +24,8 @@ const $themeButton = document.querySelector('#theme');
 $themeButton?.addEventListener('click', (event) => onThemeClick(event, dataFromAPI.clients.brands));
 
 const $burgerButton = document.querySelector('#burger');
-$burgerButton?.addEventListener('click', handleBurgerClick);
+$burgerButton?.addEventListener('click', toggleNavigation);
+
+const $navLinks = document.querySelectorAll('.nav__item');
+$navLinks.forEach((link) =>
+  link.addEventListener('click', handleNavLinkClick));
