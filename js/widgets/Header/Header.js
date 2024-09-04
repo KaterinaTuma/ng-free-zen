@@ -15,7 +15,7 @@ import { Burger } from '../../features/Burger/index.js';
  */
 
 export const Header = (data) => `
-  <header class="header">
+  <header class="header" id="header">
     <div class="header__wrapper">
       ${Logo('header__logo')}
       <nav class="header__nav">
