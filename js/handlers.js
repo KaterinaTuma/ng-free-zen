@@ -2,42 +2,42 @@ import { IconSun } from './ui/Icons/IconSun/index.js';
 import { IconMoon } from './ui/Icons/IconMoon/index.js';
 
 /**
-* @typedef {import('../js/widgets/Clients/types').BrandData} BrandData
-*/
-
-/**
- *@function handleThemeClick
- * @param {Event} event
- * @param {BrandData[]} brandsData
+ * @typedef {import('./widgets/Clients/types').BrandData} BrandFromAPI
  */
 
-export const handleThemeClick = (event, brandsData) => {
+/**
+ * @function onThemeClick
+ * @description In anonymous handler
+ * @param {Event} event
+ * @param {BrandFromAPI[]} brandsFromAPI
+ */
+
+export const onThemeClick = (event, brandsFromAPI) => {
+  /** @type {NodeListOf<HTMLImageElement>} */
+  const $brandNodes = document.querySelectorAll('[data-id="brand"]');
+  const $themeButton = /** @type {HTMLElement | null} */ (event.currentTarget);
+  /** @type {HTMLElement | null} */
   const $root = document.querySelector('#root');
 
-  /** @type {NodeListOf<HTMLImageElement>} */
-  const $brands = document.querySelectorAll('[data-id="brand"]');
+  if (!$brandNodes || !$themeButton || !$root) return;
 
-  /** @type { * | EventTarget } */
-  const $themeButton = event.currentTarget;
-  const theme = $themeButton?.dataset.theme;
+  const currentTheme = $themeButton.dataset.theme;
 
-  if (theme === 'light') {
+  if (currentTheme === 'light') {
     $themeButton.dataset.theme = 'dark';
     $themeButton.innerHTML = IconSun();
-    $root?.classList.remove('light');
-    $root?.classList.add('dark');
-    $brands.forEach((brand, index) => {
-      brand.src = brandsData[index].logo.darkSource;
+    $root.dataset.theme = 'dark';
+    $brandNodes.forEach((brand, index) => {
+      brand.src = brandsFromAPI[index].logo.darkSource;
     });
   };
 
-  if (theme === 'dark') {
+  if (currentTheme === 'dark') {
     $themeButton.dataset.theme = 'light';
     $themeButton.innerHTML = IconMoon();
-    $root?.classList.remove('dark');
-    $root?.classList.add('light');
-    $brands.forEach((brand, index) => {
-      brand.src = brandsData[index].logo.lightSource;
+    $root.dataset.theme = 'light';
+    $brandNodes.forEach((brand, index) => {
+      brand.src = brandsFromAPI[index].logo.lightSource;
     });
   };
 };
