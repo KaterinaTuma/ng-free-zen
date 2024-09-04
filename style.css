@@ -41,7 +41,7 @@ input {
   outline: none;
 }
 
-.app.light {
+.root[data-theme=light] {
   --color-primary: #000000;
   --bg-color-primary: #ffffff;
   --bg-color-image: #aaaaaa;
@@ -51,7 +51,8 @@ input {
   --border-color-lang: #000000;
   --border-color-image: #aaaaaa;
 }
-.app.dark {
+
+.root[data-theme=dark] {
   --color-primary: #ffffff;
   --bg-color-primary: #484848;
   --bg-color-image: #ffffff;
@@ -90,7 +91,7 @@ body {
   font-size: 14px;
 }
 
-.app {
+.root {
   color: var(--color-primary);
   background: var(--bg-color-primary);
 }

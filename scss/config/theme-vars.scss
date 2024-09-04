@@ -1,33 +1,31 @@
-.app {
-  &.light {
-    // color:
-    --color-primary: #000000;
+.root[data-theme="light"] {
+  // color:
+  --color-primary: #000000;
 
-    // background-color:
-    --bg-color-primary: #ffffff;
-    --bg-color-image: #aaaaaa;
-    --bg-color-footer: #484848;
-    --bg-color-link: #222222;
+  // background-color:
+  --bg-color-primary: #ffffff;
+  --bg-color-image: #aaaaaa;
+  --bg-color-footer: #484848;
+  --bg-color-link: #222222;
 
-    // border-color:
-    --border-color-default: #aaaaaa;
-    --border-color-lang: #000000;
-    --border-color-image: #aaaaaa;
-  }
+  // border-color:
+  --border-color-default: #aaaaaa;
+  --border-color-lang: #000000;
+  --border-color-image: #aaaaaa;
+}
 
-  &.dark {
-    // color:
-    --color-primary: #ffffff;
+.root[data-theme="dark"] {
+  // color:
+  --color-primary: #ffffff;
 
-    // background-color:
-    --bg-color-primary: #484848;
-    --bg-color-image: #ffffff;
-    --bg-color-footer: #484848;
-    --bg-color-link: none;
+  // background-color:
+  --bg-color-primary: #484848;
+  --bg-color-image: #ffffff;
+  --bg-color-footer: #484848;
+  --bg-color-link: none;
 
-    // border-color:
-    --border-color-default: #ffffff;
-    --border-color-lang: #ffffff;
-    --border-color-image: #484848;
-  }
+  // border-color:
+  --border-color-default: #ffffff;
+  --border-color-lang: #ffffff;
+  --border-color-image: #484848;
 }
