@@ -41,3 +41,18 @@ export const onThemeClick = (event, brandsFromAPI) => {
     });
   };
 };
+
+/**
+ * @function handleBurgerClick
+ * @param {Event} event
+ */
+
+export const handleBurgerClick = (event) => {
+  const $burgerButton = /** @type {HTMLElement | null} */ (event.currentTarget);
+  const $nav = document.querySelector('#nav');
+
+  if (!$burgerButton || !$nav) return;
+
+  $nav.classList.toggle('active');
+  $burgerButton.classList.toggle('active');
+};

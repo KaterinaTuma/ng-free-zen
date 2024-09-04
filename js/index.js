@@ -7,6 +7,7 @@ import { Clients } from './widgets/Clients/Clients.js';
 import { Footer } from './widgets/Footer/Footer.js';
 import { dataFromAPI } from './dataFromAPI.js';
 import { onThemeClick } from './handlers.js';
+import { handleBurgerClick } from './handlers.js';
 
 const $root = document.querySelector('#root');
 
@@ -20,3 +21,6 @@ $root?.insertAdjacentHTML('beforeend', Footer(dataFromAPI.secondaryInfo));
 
 const $themeButton = document.querySelector('#theme');
 $themeButton?.addEventListener('click', (event) => onThemeClick(event, dataFromAPI.clients.brands));
+
+const $burgerButton = document.querySelector('#burger');
+$burgerButton?.addEventListener('click', handleBurgerClick);
