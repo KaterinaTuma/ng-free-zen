@@ -6,9 +6,9 @@
  * @returns {string} HTML
  */
 
-export const Button = (text, className, id) => `
+export const Button = (text, className, type, id) => `
   <button class="${className}"
-    type="button"
+    type="${type}"
     id="${id}"
   >
     ${text}
