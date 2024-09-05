@@ -1,5 +1,6 @@
 import { IconSun } from './ui/Icons/IconSun/index.js';
 import { IconMoon } from './ui/Icons/IconMoon/index.js';
+import { scrollToTarget } from './utils/scrollToTarget/index.js';
 
 /**
  * @typedef {import('./widgets/Clients/types').BrandData} BrandFromAPI
@@ -43,16 +44,29 @@ export const onThemeClick = (event, brandsFromAPI) => {
 };
 
 /**
- * @function handleBurgerClick
- * @param {Event} event
+ * @function toggleNavigation
  */
 
-export const handleBurgerClick = (event) => {
-  const $burgerButton = /** @type {HTMLElement | null} */ (event.currentTarget);
+export const toggleNavigation = () => {
   const $nav = document.querySelector('#nav');
+  const $burgerButton = document.querySelector('#burger');
 
-  if (!$burgerButton || !$nav) return;
+  if (!$nav || !$burgerButton) return;
 
   $nav.classList.toggle('active');
   $burgerButton.classList.toggle('active');
+};
+
+/**
+ * @function handleNavLinkClick
+ * @param {Event} event
+ * @returns {void}
+ */
+
+export const handleNavLinkClick = (event) => {
+  event.preventDefault();
+  const targetId = /** @type {HTMLAnchorElement} */ (event.target).hash;
+  if (!targetId) return;
+  scrollToTarget(targetId);
+  toggleNavigation();
 };
