@@ -27,5 +27,4 @@ const $burgerButton = document.querySelector('#burger');
 $burgerButton?.addEventListener('click', toggleNavigation);
 
 const $navLinks = document.querySelectorAll('.nav__item');
-$navLinks.forEach((link) =>
-  link.addEventListener('click', handleNavLinkClick));
+$navLinks.forEach((link) => link.addEventListener('click', handleNavLinkClick));
