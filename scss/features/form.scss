@@ -37,6 +37,16 @@
       z-index: 1;
       position: relative;
     }
+
+    & svg {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 9px;
+      height: 6px;
+      pointer-events: none;
+    }
   }
 
   &__policy {
