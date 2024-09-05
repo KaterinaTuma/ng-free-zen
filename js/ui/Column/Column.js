@@ -1,4 +1,4 @@
-import { ColumnItem } from '../ColumnItem/index.js';
+import { Link } from '../Link/index.js';
 
 /**
 * @typedef {import('./types').ColumnData} ColumnData
@@ -21,7 +21,7 @@ export const Column = (data) => {
       <ul class="column__list">
         ${links.map((link) => `
           <li class="column__item">
-            ${ColumnItem(link)}
+            ${Link(link)}
           </li>
         `).join('')}
       </ul>

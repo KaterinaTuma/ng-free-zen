@@ -1,5 +1,6 @@
 import { IconApple } from '../Icons/IconApple/IconApple.js';
 import { IconGoogle } from '../Icons/IconGoogle/IconGoogle.js';
+import { IconIn } from '../Icons/IconIn/index.js';
 
 /**
  * @typedef {import('./types').LinkData} LinkData
@@ -7,14 +8,21 @@ import { IconGoogle } from '../Icons/IconGoogle/IconGoogle.js';
 
 /**
  * @function Link
- * @param {LinkData} data
+ * @param {LinkData} linkData
  * @param {string} className
- * @returns {string} HTML
  */
 
-export const Link = (data, className) => `
-  <a class="${className}" href="${data.url}">
-    ${data.name === 'apple' ? IconApple() : ''}
-    ${data.name === 'google' ? IconGoogle() : ''}
-  </a>
-`;
+export const Link = (linkData, className = '') => {
+  const { name, url, type, content } = linkData;
+  const iconMap = {
+    apple: IconApple(),
+    google: IconGoogle(),
+    in: IconIn(),
+  };
+
+  return `
+    <a class="${className}" href="${url}">
+      ${type === 'image' ? iconMap[name] : content}
+    </a>
+  `;
+};

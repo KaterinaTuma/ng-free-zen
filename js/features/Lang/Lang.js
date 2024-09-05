@@ -1,4 +1,4 @@
-import { Select } from '../../ui/Select/index.js';
+import { Select } from '../../features/Select/index.js';
 
 /**
  * @typedef {import('./types').LangData} LangData

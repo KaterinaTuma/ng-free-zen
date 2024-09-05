@@ -46,10 +46,14 @@ export const dataFromAPI = {
       {
         name: 'apple',
         url: 'https://apple.com',
+        type: 'image',
+        content: '',
       },
       {
         name: 'google',
         url: 'https://google.com',
+        type: 'image',
+        content: '',
       },
     ],
     image: {
@@ -164,39 +168,34 @@ export const dataFromAPI = {
         name: 'Learn',
         links: [
           {
+            name: '',
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Help center',
-            },
+            type: 'text',
+            content: 'Help center',
           },
           {
+            name: '',
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Join ZEN team',
-            },
+            type: 'text',
+            content: 'Join ZEN team',
           },
           {
+            name: '',
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Privacy Policy',
-            },
+            type: 'text',
+            content: 'Privacy Policy',
           },
           {
+            name: '',
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Cookies',
-            },
+            type: 'text',
+            content: 'Cookies',
           },
           {
+            name: '',
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Terms of use',
-            },
+            type: 'text',
+            content: 'Terms of use',
           },
         ],
       },
@@ -204,25 +203,22 @@ export const dataFromAPI = {
         name: 'Discover',
         links: [
           {
+            name: '',
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'For developers',
-            },
+            type: 'text',
+            content: 'For developers',
           },
           {
+            name: '',
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Apple Pay',
-            },
+            type: 'text',
+            content: 'Apple Pay',
           },
           {
+            name: '',
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Google Pay',
-            },
+            type: 'text',
+            content: 'Google Pay',
           },
         ],
       },
@@ -230,11 +226,10 @@ export const dataFromAPI = {
         name: 'Discover',
         links: [
           {
+            name: '',
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'For developers',
-            },
+            type: 'text',
+            content: 'For developers',
           },
         ],
       },
@@ -242,19 +237,16 @@ export const dataFromAPI = {
         name: 'Offer',
         links: [
           {
+            name: '',
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: '',
-            },
-            name: 'Business',
+            type: 'text',
+            content: 'Business',
           },
           {
+            name: '',
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Personal',
-            },
+            type: 'text',
+            content: 'Personal',
           },
         ],
       },
@@ -262,18 +254,16 @@ export const dataFromAPI = {
         name: 'Language',
         links: [
           {
+            name: '',
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'English',
-            },
+            type: 'text',
+            content: 'English',
           },
           {
+            name: '',
             url: 'https://example.com',
-            content: {
-              type: 'text',
-              data: 'Polish',
-            },
+            type: 'text',
+            content: 'Polish',
           },
         ],
       },
@@ -281,11 +271,10 @@ export const dataFromAPI = {
         name: 'Follow us',
         links: [
           {
+            name: 'in',
             url: 'https://example.com',
-            content: {
-              type: 'image',
-              data: './assets/icons/in.svg',
-            },
+            type: 'image',
+            content: 'in',
           },
         ],
       },
@@ -293,11 +282,10 @@ export const dataFromAPI = {
         name: 'Contact',
         links: [
           {
+            name: 'in',
             url: 'mailto:hello@zen.com',
-            content: {
-              type: 'email',
-              data: 'hello@zen.com',
-            },
+            type: 'email',
+            content: 'hello@zen.com',
           },
         ],
       },
@@ -317,5 +305,53 @@ export const dataFromAPI = {
         data: './assets/icons/developer.svg',
       },
     },
+  },
+  modal: {
+    title: {
+      content: 'Order a consultation',
+      priority: 3,
+    },
+    fields: [
+      {
+        id: 'name',
+        type: 'text',
+        placeholder: 'Name',
+      },
+      {
+        id: 'tel',
+        type: 'tel',
+        placeholder: 'Tel.',
+      },
+      {
+        id: 'email',
+        type: 'email',
+        placeholder: 'E-mail',
+      },
+    ],
+    connection: [
+      {
+        name: '',
+        key: '',
+      },
+      {
+        name: 'Telegram',
+        key: 'telegram',
+      },
+      {
+        name: 'WhatsApp',
+        key: 'whatsapp',
+      },
+    ],
+    policy: {
+      id: 'policy',
+      type: 'checkbox',
+      link: {
+        name: '',
+        url: 'https://example.com/policy',
+        type: 'text',
+        content: 'Privacy policy',
+      },
+    },
+    buttonText: 'Submit',
   },
 };
