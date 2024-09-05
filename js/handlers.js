@@ -60,16 +60,13 @@ export const toggleNavigation = () => {
 /**
  * @function handleNavLinkClick
  * @param {Event} event
+ * @returns {void}
  */
 
 export const handleNavLinkClick = (event) => {
   event.preventDefault();
-
-  const $navLink = /** @type {HTMLAnchorElement} */ (event.target);
-  const targetId = $navLink.getAttribute('href');
-
+  const targetId = /** @type {HTMLAnchorElement} */ (event.target).hash;
   if (!targetId) return;
-
   scrollToTarget(targetId);
   toggleNavigation();
 };
