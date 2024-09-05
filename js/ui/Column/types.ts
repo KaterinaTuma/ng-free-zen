@@ -1,14 +1,6 @@
-type ContendData = {
-  type: string;
-  data: string;
-}
-
-export type ItemData = {
-  url: string;
-  content: ContendData;
-}
+import { LinkData } from '../Link/types';
 
 export type ColumnData = {
   name: string;
-  links: ItemData[];
-}
+  links: LinkData[];
+};
