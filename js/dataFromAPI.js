@@ -318,4 +318,60 @@ export const dataFromAPI = {
       },
     },
   },
+  modal: {
+    title: {
+      content: 'Order a consultation',
+      priority: 3,
+    },
+    fields: [
+      {
+        id: 'name',
+        type: 'text',
+        placeholder: 'Name',
+      },
+      {
+        id: 'tel',
+        type: 'tel',
+        placeholder: 'Tel.',
+      },
+      {
+        id: 'email',
+        type: 'email',
+        placeholder: 'E-mail',
+      },
+      {
+        id: 'connection',
+        type: 'select',
+        placeholder: 'Connection',
+        options: [
+          {
+            name: '',
+            key: '',
+          },
+          {
+            name: 'Telegram',
+            key: 'telegram',
+          },
+          {
+            name: 'WhatsApp',
+            key: 'whatsapp',
+          },
+        ],
+      },
+      {
+        id: 'policy',
+        type: 'checkbox',
+        links: [
+          {
+            url: '"https://example.com/policy',
+            content: {
+              type: 'text',
+              data: 'Privacy policy',
+            },
+          },
+        ],
+      },
+    ],
+    buttonText: 'Submit',
+  },
 };
