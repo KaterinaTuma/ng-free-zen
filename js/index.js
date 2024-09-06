@@ -11,6 +11,7 @@ import { onThemeClick } from './handlers.js';
 import { handleNavLinkClick } from './handlers.js';
 import { handleLogoClick } from './handlers.js';
 import { toggleNavigation } from './utils/toggleNavigation/index.js';
+import { toggleModal } from './utils/toggleModal/index.js';
 
 const $root = document.querySelector('#root');
 
@@ -34,3 +35,9 @@ $navLinks.forEach(($navLink) => $navLink.addEventListener('click', handleNavLink
 
 const $logo = document.querySelector('#logo');
 $logo?.addEventListener('click', handleLogoClick);
+
+const $orderOpenButton = document.querySelector('#order-open');
+$orderOpenButton?.addEventListener('click', () => toggleModal());
+
+const $orderCloseButton = document.querySelector('#order-close');
+$orderCloseButton?.addEventListener('click', () => toggleModal());
