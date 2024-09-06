@@ -1,4 +1,4 @@
-import { IconArrowDown } from '../../ui/Icons/IconArrowDown/index.js';
+import { IconArrowDown } from '../../ui/icons/index.js';
 
 /**
  * @typedef {import('./types').SelectItemData} SelectItemData

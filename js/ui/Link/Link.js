@@ -1,6 +1,6 @@
-import { IconApple } from '../Icons/IconApple/IconApple.js';
-import { IconGoogle } from '../Icons/IconGoogle/IconGoogle.js';
-import { IconIn } from '../Icons/IconIn/index.js';
+import { IconApple } from '../icons/index.js';
+import { IconGoogle } from '../icons/index.js';
+import { IconIn } from '../icons/index.js';
 
 /**
  * @typedef {import('./types').LinkData} LinkData

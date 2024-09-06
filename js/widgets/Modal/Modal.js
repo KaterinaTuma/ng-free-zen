@@ -1,7 +1,7 @@
 import { Button } from '../../ui/Button/index.js';
 import { Title } from '../../ui/Title/index.js';
 import { Form } from '../../features/Form/index.js';
-import { IconClose } from '../../ui/Icons/IconClose/index.js';
+import { IconClose } from '../../ui/icons/index.js';
 
 /**
  * @typedef {import('./types').ModalData} ModalData
@@ -14,7 +14,7 @@ import { IconClose } from '../../ui/Icons/IconClose/index.js';
  */
 
 export const Modal = (data) => `
-  <div class="modal active" id="modal">
+  <div class="modal" id="modal">
     <div class="modal__body">
       <!-- Close -->
       ${Button(IconClose(), 'modal__close', 'close')}
