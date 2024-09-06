@@ -1,6 +1,7 @@
 import { IconSun } from './ui/icons/index.js';
 import { IconMoon } from './ui/icons/index.js';
 import { scrollToTarget } from './utils/scrollToTarget/index.js';
+import { toggleNavigation } from './utils/toggleNavigation/index.js';
 
 /**
  * @typedef {import('./widgets/Clients/types').BrandData} BrandFromAPI
@@ -44,20 +45,6 @@ export const onThemeClick = (event, brandsFromAPI) => {
 };
 
 /**
- * @function toggleNavigation
- */
-
-export const toggleNavigation = () => {
-  const $nav = document.querySelector('#nav');
-  const $burgerButton = document.querySelector('#burger');
-
-  if (!$nav || !$burgerButton) return;
-
-  $nav.classList.toggle('active');
-  $burgerButton.classList.toggle('active');
-};
-
-/**
  * @function handleNavLinkClick
  * @param {Event} event
  * @returns {void}
@@ -69,4 +56,16 @@ export const handleNavLinkClick = (event) => {
   if (!targetId) return;
   scrollToTarget(targetId);
   toggleNavigation();
+};
+
+/**
+ * @function handleLogoClick
+ * @return {void}
+ */
+
+export const handleLogoClick = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
 };
