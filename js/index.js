@@ -8,8 +8,9 @@ import { Footer } from './widgets/Footer/index.js';
 import { Modal } from './widgets/Modal/index.js';
 import { dataFromAPI } from './dataFromAPI.js';
 import { onThemeClick } from './handlers.js';
-import { toggleNavigation } from './handlers.js';
 import { handleNavLinkClick } from './handlers.js';
+import { handleLogoClick } from './handlers.js';
+import { toggleNavigation } from './utils/toggleNavigation/index.js';
 
 const $root = document.querySelector('#root');
 
@@ -30,3 +31,6 @@ $burgerButton?.addEventListener('click', () => toggleNavigation());
 
 const $navLinks = document.querySelectorAll('[data-id="nav-link"]');
 $navLinks.forEach(($navLink) => $navLink.addEventListener('click', handleNavLinkClick));
+
+const $logo = document.querySelector('#logo');
+$logo?.addEventListener('click', handleLogoClick);
