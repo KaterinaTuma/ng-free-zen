@@ -1,3 +1,4 @@
+import { dataFromAPI } from './dataFromAPI.js';
 import { Header } from './widgets/Header/index.js';
 import { Download } from './widgets/Download/index.js';
 import { Warranty } from './widgets/Warranty/index.js';
@@ -6,12 +7,12 @@ import { Cashback } from './widgets/Cashback/index.js';
 import { Clients } from './widgets/Clients/index.js';
 import { Footer } from './widgets/Footer/index.js';
 import { Modal } from './widgets/Modal/index.js';
-import { dataFromAPI } from './dataFromAPI.js';
 import { onThemeClick } from './handlers.js';
 import { handleNavLinkClick } from './handlers.js';
 import { handleLogoClick } from './handlers.js';
-import { toggleNavigation } from './utils/toggleNavigation/index.js';
-import { toggleModal } from './utils/toggleModal/index.js';
+import { handleOrderOpenClick } from './handlers.js';
+import { handleOrderCloseClick } from './handlers.js';
+import { toggleNavigation } from './utils/index.js';
 
 const $root = document.querySelector('#root');
 
@@ -37,7 +38,7 @@ const $logo = document.querySelector('#logo');
 $logo?.addEventListener('click', handleLogoClick);
 
 const $orderOpenButton = document.querySelector('#order-open');
-$orderOpenButton?.addEventListener('click', () => toggleModal());
+$orderOpenButton?.addEventListener('click', handleOrderOpenClick);
 
 const $orderCloseButton = document.querySelector('#order-close');
-$orderCloseButton?.addEventListener('click', () => toggleModal());
+$orderCloseButton?.addEventListener('click', handleOrderCloseClick);

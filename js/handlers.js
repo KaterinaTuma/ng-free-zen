@@ -1,7 +1,7 @@
 import { IconSun } from './ui/icons/index.js';
 import { IconMoon } from './ui/icons/index.js';
-import { scrollToTarget } from './utils/scrollToTarget/index.js';
-import { toggleNavigation } from './utils/toggleNavigation/index.js';
+import { scrollToTarget } from './utils/index.js';
+import { toggleNavigation } from './utils/index.js';
 
 /**
  * @typedef {import('./widgets/Clients/types').BrandData} BrandFromAPI
@@ -68,4 +68,24 @@ export const handleLogoClick = () => {
     top: 0,
     behavior: 'smooth',
   });
+};
+
+/**
+ * @function handleOrderOpenClick
+ * @return {void}
+ */
+
+export const handleOrderOpenClick = () => {
+  const $modal = document.querySelector('#modal');
+  $modal?.classList.add('active');
+};
+
+/**
+ * @function handleOrderCloseClick
+ * @return {void}
+ */
+
+export const handleOrderCloseClick = () => {
+  const $modal = document.querySelector('#modal');
+  $modal?.classList.remove('active');
 };
