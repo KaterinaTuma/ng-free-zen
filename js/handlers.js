@@ -1,5 +1,5 @@
-import { IconSun } from './ui/Icons/IconSun/index.js';
-import { IconMoon } from './ui/Icons/IconMoon/index.js';
+import { IconSun } from './ui/icons/index.js';
+import { IconMoon } from './ui/icons/index.js';
 import { scrollToTarget } from './utils/scrollToTarget/index.js';
 
 /**

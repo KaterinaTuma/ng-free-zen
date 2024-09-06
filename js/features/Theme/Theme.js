@@ -1,4 +1,4 @@
-import { IconMoon } from '../../ui/Icons/IconMoon/index.js';
+import { IconMoon } from '../../ui/icons/index.js';
 
 /**
  * @function Theme
