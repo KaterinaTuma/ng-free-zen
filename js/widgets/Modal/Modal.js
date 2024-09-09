@@ -17,7 +17,7 @@ export const Modal = (data) => `
   <div class="modal" id="modal">
     <div class="modal__body">
       <!-- Close -->
-      ${Button(IconClose(), 'modal__close', 'close')}
+      ${Button(IconClose(), 'modal__close', 'order-close')}
       <!-- Title -->
       ${Title(data.title, 'modal__title')}
       <!-- Form -->
