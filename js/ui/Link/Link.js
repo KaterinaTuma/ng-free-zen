@@ -1,6 +1,7 @@
 import { IconApple } from '../icons/index.js';
 import { IconGoogle } from '../icons/index.js';
 import { IconIn } from '../icons/index.js';
+import { IconDeveloper } from '../icons/index.js';
 
 /**
  * @typedef {import('./types').LinkData} LinkData
@@ -18,6 +19,7 @@ export const Link = (linkData, className = '') => {
     apple: IconApple(),
     google: IconGoogle(),
     in: IconIn(),
+    developer: IconDeveloper(),
   };
 
   return `

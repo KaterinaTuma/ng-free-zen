@@ -1,5 +1,1 @@
-export type InputData = {
-  id: string;
-  type: string;
-  placeholder: string;
-};
+export type { InputData } from '../../types';

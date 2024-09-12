@@ -1,4 +1,1 @@
-export type ImageData = {
-  source: string;
-  description: string;
-};
+export type { ImageData } from '../../types';

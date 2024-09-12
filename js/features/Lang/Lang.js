@@ -1,7 +1,7 @@
 import { Select } from '../../features/Select/index.js';
 
 /**
- * @typedef {import('./types').LangData} LangData
+ * @typedef {import('./types.js').SelectItemData} LangData
  */
 
 /**
