@@ -1,8 +1,8 @@
-import { Title } from '../../ui/Title/index.js';
-import { Image } from '../../ui/Image/index.js';
+import { Title } from '../../ui/index.js';
+import { Image } from '../../ui/index.js';
 
 /**
-* @typedef {import('./types').WarrantyData} WarrantyData
+* @typedef {import('./types.js').WarrantyData} WarrantyData
 */
 
 /**

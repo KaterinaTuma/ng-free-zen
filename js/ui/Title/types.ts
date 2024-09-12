@@ -1,4 +1,1 @@
-export type TitleData = {
-  content: string;
-  priority: number;
-};
+export type { TitleData } from '../../types';

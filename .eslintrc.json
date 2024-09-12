@@ -64,7 +64,7 @@
         "overrides": { "function": { "after": false } }
       }
     ],
-    "max-len": ["error", { "code": 180, "ignoreUrls": true }],
+    "max-len": ["error", { "code": 200, "ignoreUrls": true }],
     "max-nested-callbacks": ["error", { "max": 5 }],
     "new-cap": [
       "error",

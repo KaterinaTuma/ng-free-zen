@@ -1,6 +1,6 @@
-import { Button } from '../../ui/Button/index.js';
-import { Title } from '../../ui/Title/index.js';
-import { Form } from '../../features/Form/index.js';
+import { Button } from '../../ui/index.js';
+import { Title } from '../../ui/index.js';
+import { Form } from '../../features/index.js';
 import { IconClose } from '../../ui/icons/index.js';
 
 /**

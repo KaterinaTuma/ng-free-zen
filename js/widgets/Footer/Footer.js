@@ -1,6 +1,6 @@
-import { Column } from '../../ui/Column/index.js';
-import { IconLogo2 } from '../../ui//icons/index.js';
-import { IconDeveloper } from '../../ui//icons/index.js';
+import { Column } from '../../ui/index.js';
+import { IconLogo2 } from '../../ui/icons/index.js';
+import { Link } from '../../ui/index.js';
 
 /**
 * @typedef {import('./types').FooterData} FooterData
@@ -29,9 +29,7 @@ export const Footer = (data) => {
           <!-- Texts -->
           ${texts.map((text) => `<p class="footer__copy">${text}</p>`).join('')}
           <!-- Developer -->
-          <a class="footer__dev" href="${developer.url}">
-            ${IconDeveloper()}
-          </a>
+          ${Link(developer, 'footer__dev')}
         </div>
       </div>
     </footer>
