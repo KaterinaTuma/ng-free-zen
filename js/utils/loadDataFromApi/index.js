@@ -1,1 +1,1 @@
-export { loadDataFromApi } from './loadDataFromApi.js';
+export { loadDataFromAPI } from './loadDataFromAPI.js';

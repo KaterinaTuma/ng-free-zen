@@ -1,16 +1,16 @@
 import { toCapitalize } from '../index.js';
 
 /**
- * @typedef {import('../../types').AppData} AppData
+ * @typedef {import('../../types.js').AppData} AppData
  */
 
 /**
- * @function loadDataFromApi
+ * @function loadDataFromAPI
  * @param {string} lang
  * @return {Promise<AppData|null>}
  */
 
-export const loadDataFromApi = async (lang) => {
+export const loadDataFromAPI = async (lang) => {
   try {
     const moduleName = `data${toCapitalize(lang)}`;
     const module = await import(`../../api/${moduleName}.js`);

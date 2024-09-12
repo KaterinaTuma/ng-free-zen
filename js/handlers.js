@@ -2,7 +2,7 @@ import { IconSun } from './ui/icons/index.js';
 import { IconMoon } from './ui/icons/index.js';
 import { scrollToTarget } from './utils/index.js';
 import { toggleNavigation } from './utils/index.js';
-import { loadDataFromApi } from './utils/index.js';
+import { loadDataFromAPI } from './utils/index.js';
 import { App } from './app/index.js';
 import { addHandlers } from './addHandlers.js';
 
@@ -100,16 +100,16 @@ export const handleOrderCloseClick = () => {
  */
 
 export const handleLangChange = async (event) => {
-  const currentLang =/** @type {HTMLSelectElement} */ (event?.target).value;
+  const currentLang = /** @type {HTMLSelectElement} */ (event?.target).value;
   const $root = document.querySelector('#root');
 
   if (!$root) return;
 
-  const dataFromAPI = await loadDataFromApi(currentLang);
+  const dataFromAPI = await loadDataFromAPI(currentLang);
 
-  if (dataFromAPI) {
-    $root.innerHTML = App(dataFromAPI);
-    addHandlers(dataFromAPI);
-  }
+  if (!dataFromAPI) return;
+
+  $root.innerHTML = App(dataFromAPI);
+  addHandlers(dataFromAPI);
 };
 
