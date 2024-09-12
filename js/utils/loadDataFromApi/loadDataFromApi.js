@@ -12,8 +12,8 @@ import { toCapitalize } from '../index.js';
 
 export const loadDataFromApi = async (lang) => {
   try {
-    const moduleName  = `data${toCapitalize(lang)}`;
-    const module  = await import(`../../api/${moduleName}.js`);
+    const moduleName = `data${toCapitalize(lang)}`;
+    const module = await import(`../../api/${moduleName}.js`);
     return module[moduleName];
   } catch (error) {
     console.error(`Failed to load data`, error);
