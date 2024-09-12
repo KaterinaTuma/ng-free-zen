@@ -1,9 +1,14 @@
-import { dataEn as dataFromAPI } from './api/index.js';
 import { App } from './app/index.js';
 import { addHandlers } from './addHandlers.js';
 
 const $root = document.querySelector('#root');
 
-$root?.insertAdjacentHTML('beforeend', App(dataFromAPI));
+fetch('https://ng-pro-zen-default-rtdb.europe-west1.firebasedatabase.app/.json')
+  .then((response) => response.json())
+  .then((responseData) => {
+    const dataFromAPI = responseData.en;
 
-addHandlers(dataFromAPI);
+    $root?.insertAdjacentHTML('beforeend', App(dataFromAPI));
+
+    addHandlers(dataFromAPI);
+  });

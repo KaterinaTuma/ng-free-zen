@@ -105,11 +105,14 @@ export const handleLangChange = async (event) => {
 
   if (!$root) return;
 
-  const dataFromAPI = await loadDataFromAPI(currentLang);
+  fetch('https://ng-pro-zen-default-rtdb.europe-west1.firebasedatabase.app/.json')
+    .then((response) => response.json())
+    .then((responseData) => {
+      const dataFromAPI = responseData[currentLang];
 
-  if (!dataFromAPI) return;
+      $root.innerHTML = App(dataFromAPI);
 
-  $root.innerHTML = App(dataFromAPI);
-  addHandlers(dataFromAPI);
+      addHandlers(dataFromAPI);
+    });
 };
 
