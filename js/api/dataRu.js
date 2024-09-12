@@ -1,46 +1,45 @@
-export const dataFromAPI = {
+export const dataRu = {
   primaryInfo: {
     langs: [
-      {
-        name: 'EN',
-        key: 'en',
-      },
       {
         name: 'RU',
         key: 'ru',
       },
+      {
+        name: 'EN',
+        key: 'en',
+      },
     ],
     navigation: [
       {
-        name: 'Download',
+        name: 'Скачать',
         key: 'download',
       },
       {
-        name: 'Warranty',
+        name: 'Гарантия',
         key: 'warranty',
       },
       {
-        name: 'Care',
+        name: 'Забота',
         key: 'care',
       },
       {
-        name: 'Cashback',
+        name: 'Кэшбэк',
         key: 'cashback',
       },
       {
-        name: 'Clients',
+        name: 'Клиенты',
         key: 'clients',
       },
-
     ],
   },
   download: {
     title: {
-      content: 'Peaceful shopping mindful money',
+      content: 'Спокойные покупки, осознанное управление деньгами',
       priority: 1,
     },
     texts: [
-      'See how we can help with making your shopping experience and money management more ZEN.',
+      'Посмотрите, как мы можем помочь сделать ваш опыт покупок и управление деньгами более осознанным.',
     ],
     links: [
       {
@@ -58,49 +57,49 @@ export const dataFromAPI = {
     ],
     image: {
       source: './assets/images/1.jpg',
-      description: 'Bag and device',
+      description: 'Сумка и устройство',
     },
   },
   warranty: {
     title: {
-      content: '1-year warranty boost',
+      content: 'Увеличенная гарантия на 1 год',
       priority: 2,
     },
     texts: [
-      'ZEN cards have a very neat feature that will help you whenever your electronic devices start failing after the standard warranty ends, which is pretty common.',
-      'When you buy any electronics with your ZEN shopping Mastercard, their warranty gets extended by one year. How does it work? It simply does. Automatically.',
+      'Карты ZEN имеют отличную функцию, которая поможет вам, когда ваши электронные устройства начнут выходить из строя после окончания стандартной гарантии, что случается довольно часто.',
+      'При покупке любой электроники с помощью вашей карты ZEN Mastercard, гарантия на них продлевается на один год. Как это работает? Просто. Автоматически.',
     ],
     image: {
       source: './assets/images/2.jpg',
-      description: 'Basket',
+      description: 'Корзина',
     },
   },
   care: {
     title: {
-      content: 'ZEN Care',
+      content: 'ZEN Забота',
       priority: 2,
     },
     texts: [
-      'Shopping online is usually a delightful experience. Until it\'s not.',
-      'Until something you buy, proves to be faulty, missing or a totally wrong item, you\'re in for long product return procedures.',
-      'But, here comes ZEN Care: a free, built-in shopping protection.',
+      'Покупки в интернете обычно приносят удовольствие. Пока это не так.',
+      'Когда то, что вы купили, оказывается неисправным, отсутствующим или совершенно не тем товаром, вам предстоит долгая процедура возврата.',
+      'Но здесь на помощь приходит ZEN Care: бесплатная, встроенная защита покупок.',
     ],
     image: {
       source: './assets/images/3.jpg',
-      description: 'Card',
+      description: 'Карта',
     },
   },
   cashback: {
     title: {
-      content: 'and cashback',
+      content: 'и кэшбэк',
       priority: 2,
     },
     texts: [
-      'It saves a little bit of money while you\'re shopping, but in many cases it takes ages to get anything out of it.',
-      'We gave it a thought and made cashback way more friendly.',
-      'Up to 14% of what you spend using ZEN Mastercard ® will materialize on your account right after the purchase.',
+      'Это экономит немного денег во время покупок, но в большинстве случаев на получение чего-либо уходит много времени.',
+      'Мы продумали это и сделали кэшбэк гораздо более удобным.',
+      'До 14% от суммы, потраченной с помощью ZEN Mastercard®, появится на вашем счету сразу после покупки.',
     ],
-    buttonText: 'Order a consultation',
+    buttonText: 'Заказать консультацию',
   },
   clients: {
     brands: [
@@ -165,25 +164,25 @@ export const dataFromAPI = {
   secondaryInfo: {
     categories: [
       {
-        name: 'Learn',
+        name: 'Изучить',
         links: [
           {
             name: '',
             url: 'https://example.com',
             type: 'text',
-            content: 'Help center',
+            content: 'Центр помощи',
           },
           {
             name: '',
             url: 'https://example.com',
             type: 'text',
-            content: 'Join ZEN team',
+            content: 'Присоединяйтесь к команде ZEN',
           },
           {
             name: '',
             url: 'https://example.com',
             type: 'text',
-            content: 'Privacy Policy',
+            content: 'Политика конфиденциальности',
           },
           {
             name: '',
@@ -195,18 +194,18 @@ export const dataFromAPI = {
             name: '',
             url: 'https://example.com',
             type: 'text',
-            content: 'Terms of use',
+            content: 'Условия использования',
           },
         ],
       },
       {
-        name: 'Discover',
+        name: 'Открыть',
         links: [
           {
             name: '',
             url: 'https://example.com',
             type: 'text',
-            content: 'For developers',
+            content: 'Для разработчиков',
           },
           {
             name: '',
@@ -223,52 +222,41 @@ export const dataFromAPI = {
         ],
       },
       {
-        name: 'Discover',
+        name: 'Предложение',
         links: [
           {
             name: '',
             url: 'https://example.com',
             type: 'text',
-            content: 'For developers',
+            content: 'Бизнес',
+          },
+          {
+            name: '',
+            url: 'https://example.com',
+            type: 'text',
+            content: 'Личный',
           },
         ],
       },
       {
-        name: 'Offer',
+        name: 'Язык',
         links: [
           {
             name: '',
             url: 'https://example.com',
             type: 'text',
-            content: 'Business',
+            content: 'Английский',
           },
           {
             name: '',
             url: 'https://example.com',
             type: 'text',
-            content: 'Personal',
+            content: 'Польский',
           },
         ],
       },
       {
-        name: 'Language',
-        links: [
-          {
-            name: '',
-            url: 'https://example.com',
-            type: 'text',
-            content: 'English',
-          },
-          {
-            name: '',
-            url: 'https://example.com',
-            type: 'text',
-            content: 'Polish',
-          },
-        ],
-      },
-      {
-        name: 'Follow us',
+        name: 'Следите за нами',
         links: [
           {
             name: 'in',
@@ -279,7 +267,7 @@ export const dataFromAPI = {
         ],
       },
       {
-        name: 'Contact',
+        name: 'Контакты',
         links: [
           {
             name: 'in',
@@ -291,41 +279,40 @@ export const dataFromAPI = {
       },
     ],
     texts: [
-      'ZEN is a licensed financial institution under the supervision of the Central Bank of Lithuania approved by European Banking Authority for 31 countries.',
-      'Registration number of the company 304749651, VAT ID LT100011714916.',
-      'License of electronic money institutions number LB000457.',
-      'Share capital 2.185.000,00 EUR.',
-      'Company address: Mėsinių g. 5, LT-01133, Vilnius, Lithuania.',
-      'Sales Office: ul. Emilii Plater 53, 00-113 Warsaw, Poland.',
+      'ZEN — лицензированное финансовое учреждение под надзором Центрального банка Литвы, одобренное Европейским банковским управлением для 31 страны.',
+      'Регистрационный номер компании: 304749651, VAT ID: LT100011714916.',
+      'Лицензия на выпуск электронных денег № LB000457.',
+      'Уставной капитал: 2 185 000,00 EUR.',
+      'Адрес компании: Mėsinių g. 5, LT-01133, Вильнюс, Литва.',
+      'Торговый офис: ул. Эмилии Платер 53, 00-113 Варшава, Польша.',
     ],
     developer: {
+      name: 'developer',
       url: 'https://example.com',
-      content: {
-        type: 'image',
-        data: './assets/icons/developer.svg',
-      },
+      type: 'image',
+      content: 'developer',
     },
   },
   modal: {
     title: {
-      content: 'Order a consultation',
+      content: 'Заказать консультацию',
       priority: 3,
     },
     fields: [
       {
         id: 'name',
         type: 'text',
-        placeholder: 'Name',
+        placeholder: 'Имя',
       },
       {
         id: 'tel',
         type: 'tel',
-        placeholder: 'Tel.',
+        placeholder: 'Тел.',
       },
       {
         id: 'email',
         type: 'email',
-        placeholder: 'E-mail',
+        placeholder: 'Эл. почта',
       },
     ],
     connection: [
@@ -349,9 +336,9 @@ export const dataFromAPI = {
         name: '',
         url: 'https://example.com/policy',
         type: 'text',
-        content: 'Privacy policy',
+        content: 'Политика конфиденциальности',
       },
     },
-    buttonText: 'Submit',
+    buttonText: 'Отправить',
   },
 };
