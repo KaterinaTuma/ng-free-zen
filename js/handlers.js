@@ -109,9 +109,7 @@ export const handleLangChange = async (event) => {
     .then((response) => response.json())
     .then((responseData) => {
       const dataFromAPI = responseData[currentLang];
-
       $root.innerHTML = App(dataFromAPI);
-
       addHandlers(dataFromAPI);
     });
 };
