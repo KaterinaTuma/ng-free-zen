@@ -5,6 +5,7 @@ import { toggleNavigation } from './utils/index.js';
 import { loadDataFromAPI } from './utils/index.js';
 import { App } from './app/index.js';
 import { addHandlers } from './addHandlers.js';
+import { API_URL } from './index.js';
 
 /**
  * @typedef {import('./types').BrandData} BrandFromAPI
@@ -96,21 +97,21 @@ export const handleOrderCloseClick = () => {
 /**
  * @function handleLangChange
  * @param {Event} event
- * @return {Promise<void>}
+ * @return {void}
  */
 
-export const handleLangChange = async (event) => {
+export const handleLangChange = (event) => {
   const currentLang = /** @type {HTMLSelectElement} */ (event?.target).value;
   const $root = document.querySelector('#root');
 
   if (!$root) return;
 
-  fetch('https://ng-pro-zen-default-rtdb.europe-west1.firebasedatabase.app/.json')
+  fetch(API_URL)
     .then((response) => response.json())
     .then((responseData) => {
       const dataFromAPI = responseData[currentLang];
       $root.innerHTML = App(dataFromAPI);
       addHandlers(dataFromAPI);
-    });
+    })
+    .catch((error) => console.error('Failed to update language:', error));
 };
-
