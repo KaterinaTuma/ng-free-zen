@@ -7,8 +7,7 @@ const $root = document.querySelector('#root');
 fetch(API_URL)
   .then((response) => response.json())
   .then((responseData) => {
-    const dataFromAPI = responseData.en;
-    $root?.insertAdjacentHTML('beforeend', App(dataFromAPI));
-    addHandlers(dataFromAPI);
+    if ($root) $root.innerHTML = App(responseData.en);
+    addHandlers(responseData.en);
   })
   .catch((error) => console.error('Failed to fetch data:', error));

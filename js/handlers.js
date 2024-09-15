@@ -109,9 +109,8 @@ export const handleLangChange = (event) => {
   fetch(API_URL)
     .then((response) => response.json())
     .then((responseData) => {
-      const dataFromAPI = responseData[currentLang];
-      $root.innerHTML = App(dataFromAPI);
-      addHandlers(dataFromAPI);
+      $root.innerHTML = App(responseData[currentLang]);
+      addHandlers(responseData[currentLang]);
     })
     .catch((error) => console.error('Failed to update language:', error));
 };
