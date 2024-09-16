@@ -14,7 +14,7 @@ import { IconDeveloper } from '../icons/index.js';
  */
 
 export const Link = (linkData, className = '') => {
-  const { name, url, type, content } = linkData;
+  const { name, url, type } = linkData;
   const iconMap = {
     apple: IconApple(),
     google: IconGoogle(),
@@ -24,7 +24,7 @@ export const Link = (linkData, className = '') => {
 
   return `
     <a class="${className}" href="${url}">
-      ${type === 'image' ? iconMap[name] : content}
+      ${type === 'image' ? iconMap[name] : name}
     </a>
   `;
 };
