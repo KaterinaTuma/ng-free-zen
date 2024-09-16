@@ -2,7 +2,6 @@ import { IconSun } from './ui/icons/index.js';
 import { IconMoon } from './ui/icons/index.js';
 import { scrollToTarget } from './utils/index.js';
 import { toggleNavigation } from './utils/index.js';
-import { loadDataFromAPI } from './utils/index.js';
 import { App } from './app/index.js';
 import { addHandlers } from './addHandlers.js';
 import { API_URL } from './index.js';
