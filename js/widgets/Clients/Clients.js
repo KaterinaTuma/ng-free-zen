@@ -10,6 +10,8 @@
 
 export const Clients = (data) => {
   const { brands } = data;
+  const currentTheme = localStorage.getItem('currentTheme');
+  const logoSource = currentTheme === 'dark' ? 'darkSource' : 'lightSource';
 
   return `
     <section class="clients" id="clients">
@@ -17,7 +19,7 @@ export const Clients = (data) => {
         <ul class="clients__brands" id="brands">
           ${brands.map((brand) => `
             <li class="clients__brand">
-              <img src="${brand.logo.lightSource}"
+              <img src="${brand.logo[logoSource]}"
                 alt="${brand.name}"
                 data-id="brand"
               />
@@ -28,4 +30,3 @@ export const Clients = (data) => {
     </section>
   `;
 };
-
