@@ -41,7 +41,7 @@ input {
   outline: none;
 }
 
-.root[data-theme=light] {
+.root.light {
   --color-primary: #000000;
   --bg-color-primary: #ffffff;
   --bg-color-image: #aaaaaa;
@@ -52,7 +52,7 @@ input {
   --border-color-image: #aaaaaa;
 }
 
-.root[data-theme=dark] {
+.root.dark {
   --color-primary: #ffffff;
   --bg-color-primary: #484848;
   --bg-color-image: #ffffff;

@@ -1,4 +1,4 @@
-.root[data-theme="light"] {
+.root.light {
   // color:
   --color-primary: #000000;
 
@@ -14,7 +14,7 @@
   --border-color-image: #aaaaaa;
 }
 
-.root[data-theme="dark"] {
+.root.dark {
   // color:
   --color-primary: #ffffff;
 
