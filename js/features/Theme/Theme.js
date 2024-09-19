@@ -1,4 +1,5 @@
 import { IconMoon } from '../../ui/icons/index.js';
+import { IconSun } from '../../ui/icons/index.js';
 
 /**
  * @function Theme
@@ -6,13 +7,15 @@ import { IconMoon } from '../../ui/icons/index.js';
  * @returns {string} HTML
  */
 
-export const Theme = (className) => `
-  <button class="${className}"
-    type="button"
-    id="theme"
-    data-theme="light"
-  >
-    ${IconMoon()}
-  </button>
-`;
+export const Theme = (className) => {
+  const currentTheme = localStorage.getItem('currentTheme');
 
+  return `
+    <button class="${className}"
+      type="button"
+      id="theme"
+    >
+      ${currentTheme === 'dark' ? IconSun() : IconMoon()}
+    </button>
+  `;
+};

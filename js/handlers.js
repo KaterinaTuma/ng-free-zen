@@ -2,9 +2,7 @@ import { IconSun } from './ui/icons/index.js';
 import { IconMoon } from './ui/icons/index.js';
 import { scrollToTarget } from './utils/index.js';
 import { toggleNavigation } from './utils/index.js';
-import { App } from './app/index.js';
-import { addHandlers } from './addHandlers.js';
-import { API_URL } from './index.js';
+import { renderApp } from './utils/index.js';
 
 /**
  * @typedef {import('./types').BrandData} BrandFromAPI
@@ -26,21 +24,23 @@ export const onThemeClick = (event, brandsFromAPI) => {
 
   if (!$brandNodes || !$themeButton || !$root) return;
 
-  const currentTheme = $themeButton.dataset.theme;
+  const currentTheme = localStorage.getItem('currentTheme');
 
   if (currentTheme === 'light') {
-    $themeButton.dataset.theme = 'dark';
     $themeButton.innerHTML = IconSun();
-    $root.dataset.theme = 'dark';
+    $root.classList.remove('light');
+    $root.classList.add('dark');
+    localStorage.setItem('currentTheme', 'dark');
     $brandNodes.forEach((brand, index) => {
       brand.src = brandsFromAPI[index].logo.darkSource;
     });
   };
 
   if (currentTheme === 'dark') {
-    $themeButton.dataset.theme = 'light';
     $themeButton.innerHTML = IconMoon();
-    $root.dataset.theme = 'light';
+    $root.classList.remove('dark');
+    $root.classList.add('light');
+    localStorage.setItem('currentTheme', 'light');
     $brandNodes.forEach((brand, index) => {
       brand.src = brandsFromAPI[index].logo.lightSource;
     });
@@ -101,15 +101,6 @@ export const handleOrderCloseClick = () => {
 
 export const handleLangChange = (event) => {
   const currentLang = /** @type {HTMLSelectElement} */ (event?.target).value;
-  const $root = document.querySelector('#root');
-
-  if (!$root) return;
-
-  fetch(API_URL)
-    .then((response) => response.json())
-    .then((responseData) => {
-      $root.innerHTML = App(responseData[currentLang]);
-      addHandlers(responseData[currentLang]);
-    })
-    .catch((error) => console.error('Failed to update language:', error));
+  localStorage.setItem('currentLang', currentLang);
+  renderApp(currentLang);
 };
