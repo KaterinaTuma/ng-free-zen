@@ -1,0 +1,127 @@
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: inherit;
+
+  &__wrapper {
+    position: relative;
+    width: 100px;
+    height: 16px;
+  }
+
+  &__item {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--bg-color-image);
+
+    &:nth-child(1) {
+      top: 0;
+      left: 0;
+      animation: moveFirst 2s ease-in-out infinite;
+    }
+
+    &:nth-child(2) {
+      left: 25px;
+      top: 0;
+      animation: moveSecond 2s ease-in-out infinite;
+    }
+
+    &:nth-child(3) {
+      left: 50px;
+      top: 0;
+      animation: moveThird 2s ease-in-out infinite;
+    }
+
+    &:nth-child(4) {
+      left: 75px;
+      top: 0;
+      animation: moveForth 2s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes moveFirst {
+  50% {
+    scale: 150%;
+    background: pink;
+  }
+
+  90% {
+    transform: rotate(190deg) translate(-75px);
+  }
+
+  100% {
+    transform: rotate(180deg) translate(-75px);
+    background: var(--bg-color-image);
+  }
+}
+
+@keyframes moveSecond {
+  20% {
+    transform: translate(-5px, 15px);
+  }
+
+  30% {
+    transform: rotate(5deg) translate(-5px, 15px);
+  }
+
+  50% {
+    scale: 150%;
+    background: seagreen;
+  }
+
+  90% {
+    transform: rotate(180deg) translate(-25px);
+  }
+
+  100% {
+    transform: rotate(180deg) translate(-25px);
+    background: var(--bg-color-image);
+  }
+}
+
+@keyframes moveThird {
+  15% {
+    transform: translate(5px, -15px);
+  }
+
+  20% {
+    transform: rotate(5deg) translate(5px, -15px);
+  }
+
+  50% {
+    scale: 150%;
+    background: yellow;
+  }
+
+  90% {
+    transform: rotate(180deg) translate(25px);
+  }
+
+  100% {
+    transform: rotate(180deg) translate(25px);
+    background: var(--bg-color-image);
+  }
+}
+
+@keyframes moveForth {
+  50% {
+    scale: 150%;
+    background: cyan;
+  }
+
+  90% {
+    transform: rotate(190deg) translate(75px);
+  }
+
+  100% {
+    transform: rotate(180deg) translate(75px);
+    background: var(--bg-color-image);
+  }
+}
