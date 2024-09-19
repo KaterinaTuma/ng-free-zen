@@ -1,4 +1,4 @@
-import { updateApp } from './utils/index.js';
+import { renderApp } from './utils/index.js';
 
 const currentLang = localStorage.getItem('currentLang') ?? 'en';
 const currentTheme = localStorage.getItem('currentTheme') ?? 'dark';
@@ -9,4 +9,4 @@ localStorage.setItem('currentTheme', currentTheme);
 const $root = document.querySelector('#root');
 $root?.classList.add(currentTheme);
 
-updateApp(currentLang);
+renderApp(currentLang);

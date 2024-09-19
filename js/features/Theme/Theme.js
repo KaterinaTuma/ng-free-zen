@@ -14,7 +14,6 @@ export const Theme = (className) => {
     <button class="${className}"
       type="button"
       id="theme"
-      data-theme="${currentTheme}"
     >
       ${currentTheme === 'dark' ? IconSun() : IconMoon()}
     </button>
