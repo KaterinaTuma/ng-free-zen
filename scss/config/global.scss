@@ -18,3 +18,9 @@ input {
 img {
   width: 100%;
 }
+
+@media (min-width: $breakpoint-lg) {
+  body {
+    padding-top: 78px;
+  }
+}

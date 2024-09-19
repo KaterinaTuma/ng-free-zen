@@ -36,3 +36,28 @@
     height: 46px;
   }
 }
+
+@media (min-width: $breakpoint-md) {
+  .footer {
+    padding: $padding-section-md;
+
+    &__columns {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__copy {
+      font-size: 14px;
+    }
+  }
+}
+
+
+@media (min-width: $breakpoint-lg) {
+  .footer {
+    padding: $padding-section-lg;
+
+    &__columns {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}

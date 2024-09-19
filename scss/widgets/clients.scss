@@ -16,3 +16,32 @@
     width: 130px;
   }
 }
+
+
+@media (min-width: $breakpoint-md) {
+  .clients {
+    padding: $padding-section-md;
+
+    &__brands {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__brand svg {
+      width: 150px;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .clients {
+    padding: $padding-section-lg;
+
+    &__brands {
+      gap: 42px;
+    }
+
+    &__brand svg {
+      width: 200px;
+    }
+  }
+}

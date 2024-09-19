@@ -21,3 +21,19 @@
     padding: 24px 15px;
   }
 }
+
+@media (min-width: $breakpoint-lg) {
+  .nav {
+    display: flex;
+    gap: 40px;
+
+    &__item {
+      font-size: 20px;
+      border-bottom: none;
+    }
+
+    &__item a {
+      padding: 0;
+    }
+  }
+}
