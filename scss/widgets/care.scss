@@ -38,3 +38,45 @@
     }
   }
 }
+
+@media (min-width: $breakpoint-md) {
+  .care {
+    padding: $padding-section-md;
+
+    &__wrapper {
+      flex-direction: row;
+    }
+
+    &__text-block {
+      flex: 1;
+    }
+
+    &__image-block {
+      flex: 1;
+      width: 330px;
+      height: auto;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .care {
+    padding: $padding-section-lg;
+
+    &__wrapper {
+      gap: 40px;
+    }
+
+    &__text-block {
+      align-self: center;
+    }
+
+    &__title {
+      font-size: 34px;
+    }
+
+    &__copy {
+      font-size: 18px;
+    }
+  }
+}
