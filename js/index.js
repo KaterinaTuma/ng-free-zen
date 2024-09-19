@@ -1,4 +1,4 @@
-import { updateApp } from './utils/updateApp/index.js';
+import { updateApp } from './utils/index.js';
 
 const currentLang = localStorage.getItem('currentLang') ?? 'en';
 const currentTheme = localStorage.getItem('currentTheme') ?? 'dark';

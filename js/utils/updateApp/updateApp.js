@@ -1,7 +1,7 @@
 import { API_BASE_URL } from '../../config.js';
 import { App } from '../../app/index.js';
-import { addHandlers } from '../../addHandlers.js';
 import { Preloader } from '../../ui/index.js';
+import { addHandlers } from '../../addHandlers.js';
 
 /**
  * @function updateApp
