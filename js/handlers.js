@@ -2,7 +2,7 @@ import { IconSun } from './ui/icons/index.js';
 import { IconMoon } from './ui/icons/index.js';
 import { scrollToTarget } from './utils/index.js';
 import { toggleNavigation } from './utils/index.js';
-import { initializeApp } from './utils/initializeApp/index.js';
+import { updateApp } from './utils/updateApp/index.js';
 
 /**
  * @typedef {import('./types').BrandData} BrandFromAPI
@@ -103,5 +103,5 @@ export const handleLangChange = (event) => {
   const currentLang = /** @type {HTMLSelectElement} */ (event?.target).value;
   localStorage.setItem('currentLang', currentLang);
 
-  initializeApp(currentLang);
+  updateApp(currentLang);
 };
