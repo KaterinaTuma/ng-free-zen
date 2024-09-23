@@ -68,6 +68,14 @@
   }
 }
 
+@media (min-width: $breakpoint-sm) {
+  .header {
+    &__wrapper {
+      padding: 0 40px;
+    }
+  }
+}
+
 @media (min-width: $breakpoint-md) {
   .header {
     &__wrapper {
@@ -94,6 +102,20 @@
     &__actions {
       gap: 40px;
       margin-left: 40px;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .header {
+    &__wrapper {
+      height: 78px;
+      padding: 0 165px;
+    }
+
+    &__actions {
+      gap: 50px;
+      margin-left: 50px;
     }
   }
 }

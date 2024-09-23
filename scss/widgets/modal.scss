@@ -22,12 +22,7 @@
     display: grid;
     gap: 20px;
     border-radius: 5px;
-    background: #fff;
-
-    @media (min-width: $breakpoint-md) {
-      width: 290px;
-      transition: all 1s;
-    }
+    background: var(--bg-color-primary);
   }
 
   &__close {
@@ -50,3 +45,22 @@
     font-weight: 700;
   }
 }
+
+@media (min-width: $breakpoint-sm) {
+  .modal {
+    &__body {
+      padding: $padding-section-sm;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .modal {
+    &__body {
+      width: 50vw;
+      max-width: 600px;
+      padding: $padding-section-md;
+    }
+  }
+}
+
