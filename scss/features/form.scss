@@ -53,6 +53,7 @@
     display: flex;
     gap: 15px;
     align-items: center;
+    text-decoration: underline;
 
     & input::before {
       display: block;
@@ -73,7 +74,7 @@
   &__submit {
     margin-top: 5px;
     padding-block: 12px;
-    border: 1px solid #222;
+    border: 1px solid var(--border-color-button);
     border-radius: 30px;
   }
 }

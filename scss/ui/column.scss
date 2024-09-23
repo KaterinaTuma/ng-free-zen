@@ -21,4 +21,18 @@
   }
 }
 
-@media (min-width: $breakpoint-md) {}
+@media (min-width: $breakpoint-lg) {
+  .column {
+    &__title {
+      font-size: 20px;
+    }
+
+    &__list {
+      gap: 15px;
+    }
+
+    &__item {
+      font-size: 16px;
+    }
+  }
+}

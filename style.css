@@ -50,6 +50,7 @@ input {
   --border-color-default: #aaaaaa;
   --border-color-lang: #000000;
   --border-color-image: #aaaaaa;
+  --border-color-button: #222222;
 }
 
 .root.dark {
@@ -61,6 +62,7 @@ input {
   --border-color-default: #ffffff;
   --border-color-lang: #ffffff;
   --border-color-image: #484848;
+  --border-color-button: #aaaaaa;
 }
 
 /*breakpoint*/
@@ -142,6 +144,11 @@ img {
   }
   .nav__item a {
     padding: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .nav {
+    gap: 50px;
   }
 }
 /*burger*/
@@ -246,6 +253,7 @@ img {
   display: flex;
   gap: 15px;
   align-items: center;
+  text-decoration: underline;
 }
 .form__policy input::before {
   display: block;
@@ -263,7 +271,7 @@ img {
 .form__submit {
   margin-top: 5px;
   padding-block: 12px;
-  border: 1px solid #222;
+  border: 1px solid var(--border-color-button);
   border-radius: 30px;
 }
 
@@ -391,6 +399,17 @@ img {
   height: 40px;
 }
 
+@media (min-width: 1152px) {
+  .column__title {
+    font-size: 20px;
+  }
+  .column__list {
+    gap: 15px;
+  }
+  .column__item {
+    font-size: 16px;
+  }
+}
 /*header*/
 .header {
   position: fixed;
@@ -452,6 +471,11 @@ img {
   height: 26px;
 }
 
+@media (min-width: 480px) {
+  .header__wrapper {
+    padding: 0 40px;
+  }
+}
 @media (min-width: 768px) {
   .header__wrapper {
     padding: 0 40px;
@@ -471,6 +495,16 @@ img {
   .header__actions {
     gap: 40px;
     margin-left: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .header__wrapper {
+    height: 78px;
+    padding: 0 165px;
+  }
+  .header__actions {
+    gap: 50px;
+    margin-left: 50px;
   }
 }
 /*download*/
@@ -506,7 +540,7 @@ img {
   fill: var(--bg-color-link);
 }
 .download__image-block {
-  height: 72vw;
+  aspect-ratio: 9/7;
   border: 1px solid var(--border-color-image);
   border-radius: 20px;
   overflow: hidden;
@@ -517,6 +551,11 @@ img {
   object-fit: cover;
 }
 
+@media (min-width: 480px) {
+  .download {
+    padding: 30px 10vw;
+  }
+}
 @media (min-width: 768px) {
   .download {
     padding: 30px 40px;
@@ -557,6 +596,20 @@ img {
     font-size: 18px;
   }
 }
+@media (min-width: 1440px) {
+  .download {
+    padding: 50px 165px;
+  }
+  .download__wrapper {
+    gap: 110px;
+  }
+  .download__title {
+    font-size: 56px;
+  }
+  .download__copy {
+    font-size: 20px;
+  }
+}
 /*cashback*/
 .cashback {
   padding: 30px 15px;
@@ -587,6 +640,11 @@ img {
   margin-top: 20px;
 }
 
+@media (min-width: 480px) {
+  .cashback {
+    padding: 30px 10vw;
+  }
+}
 @media (min-width: 768px) {
   .cashback {
     padding: 30px 40px;
@@ -615,7 +673,7 @@ img {
     padding: 0 216px;
   }
   .cashback__title {
-    font-size: 42px;
+    font-size: 34px;
   }
   .cashback__copy {
     font-size: 18px;
@@ -623,6 +681,30 @@ img {
   .cashback__button {
     height: 55px;
     font-size: 18px;
+  }
+}
+@media (min-width: 1440px) {
+  .cashback {
+    padding: 50px 165px;
+  }
+  .cashback__wrapper {
+    padding: 0 265px;
+  }
+  .cashback__title {
+    font-size: 40px;
+  }
+  .cashback__copy {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .cashback__copy:first-of-type {
+    margin-top: 30px;
+  }
+  .cashback__button {
+    width: 282px;
+    height: 67px;
+    font-size: 20px;
+    margin-top: 30px;
   }
 }
 /*clients*/
@@ -641,6 +723,14 @@ img {
   width: 130px;
 }
 
+@media (min-width: 480px) {
+  .clients {
+    padding: 30px 10vw;
+  }
+  .clients__brands {
+    column-gap: 45px;
+  }
+}
 @media (min-width: 768px) {
   .clients {
     padding: 30px 40px;
@@ -661,6 +751,15 @@ img {
   }
   .clients__brand svg {
     width: 200px;
+  }
+}
+@media (min-width: 1440px) {
+  .clients {
+    padding: 50px 165px;
+  }
+  .clients__brands {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
   }
 }
 /*warranty*/
@@ -686,7 +785,7 @@ img {
   margin-top: 20px;
 }
 .warranty__image-block {
-  height: 72vw;
+  aspect-ratio: 9/7;
   border: 1px solid #AAA;
   border-radius: 20px;
   overflow: hidden;
@@ -697,6 +796,11 @@ img {
   object-fit: cover;
 }
 
+@media (min-width: 480px) {
+  .warranty {
+    padding: 30px 10vw;
+  }
+}
 @media (min-width: 768px) {
   .warranty {
     padding: 30px 40px;
@@ -736,6 +840,24 @@ img {
     font-size: 18px;
   }
 }
+@media (min-width: 1440px) {
+  .warranty {
+    padding: 50px 165px;
+  }
+  .warranty__wrapper {
+    gap: 110px;
+  }
+  .warranty__title {
+    font-size: 40px;
+  }
+  .warranty__copy {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .warranty__copy:first-of-type {
+    margin-top: 30px;
+  }
+}
 /*care*/
 .care {
   padding: 30px 15px;
@@ -759,7 +881,7 @@ img {
   margin-top: 20px;
 }
 .care__image-block {
-  height: 72vw;
+  aspect-ratio: 9/7;
   border: 1px solid #AAA;
   border-radius: 20px;
   overflow: hidden;
@@ -770,6 +892,11 @@ img {
   object-fit: cover;
 }
 
+@media (min-width: 480px) {
+  .care {
+    padding: 30px 10vw;
+  }
+}
 @media (min-width: 768px) {
   .care {
     padding: 30px 40px;
@@ -803,6 +930,24 @@ img {
     font-size: 18px;
   }
 }
+@media (min-width: 1440px) {
+  .care {
+    padding: 50px 165px;
+  }
+  .care__wrapper {
+    gap: 110px;
+  }
+  .care__title {
+    font-size: 40px;
+  }
+  .care__copy {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .care__copy:first-of-type {
+    margin-top: 30px;
+  }
+}
 /*modal*/
 .modal {
   display: none;
@@ -826,13 +971,7 @@ img {
   display: grid;
   gap: 20px;
   border-radius: 5px;
-  background: #fff;
-}
-@media (min-width: 768px) {
-  .modal__body {
-    width: 290px;
-    transition: all 1s;
-  }
+  background: var(--bg-color-primary);
 }
 .modal__close {
   width: 34px;
@@ -852,6 +991,18 @@ img {
   font-weight: 700;
 }
 
+@media (min-width: 480px) {
+  .modal__body {
+    padding: 30px 10vw;
+  }
+}
+@media (min-width: 768px) {
+  .modal__body {
+    width: 50vw;
+    max-width: 600px;
+    padding: 30px 40px;
+  }
+}
 /*footer*/
 .footer {
   padding: 30px 15px;
@@ -885,6 +1036,11 @@ img {
   height: 46px;
 }
 
+@media (min-width: 480px) {
+  .footer {
+    padding: 30px 10vw;
+  }
+}
 @media (min-width: 768px) {
   .footer {
     padding: 30px 40px;
@@ -902,6 +1058,14 @@ img {
   }
   .footer__columns {
     grid-template-columns: repeat(6, 1fr);
+  }
+  .footer__copy {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1440px) {
+  .footer {
+    padding: 50px 165px;
   }
 }
 

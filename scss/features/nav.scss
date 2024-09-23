@@ -37,3 +37,9 @@
     }
   }
 }
+
+@media (min-width: $breakpoint-xl) {
+  .nav {
+    gap: 50px;
+  }
+}

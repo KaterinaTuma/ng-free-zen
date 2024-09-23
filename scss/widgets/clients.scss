@@ -17,6 +17,15 @@
   }
 }
 
+@media (min-width: $breakpoint-sm) {
+  .clients {
+    padding: $padding-section-sm;
+
+    &__brands {
+      column-gap: 45px;
+    }
+  }
+}
 
 @media (min-width: $breakpoint-md) {
   .clients {
@@ -42,6 +51,17 @@
 
     &__brand svg {
       width: 200px;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .clients {
+    padding: $padding-section-xl;
+
+    &__brands {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 30px;
     }
   }
 }

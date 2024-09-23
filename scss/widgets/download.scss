@@ -39,7 +39,7 @@
   }
 
   &__image-block {
-    height: 72vw;
+    aspect-ratio: 9 / 7;
     border: 1px solid var(--border-color-image);
     border-radius: 20px;
     overflow: hidden;
@@ -52,6 +52,11 @@
   }
 }
 
+@media (min-width: $breakpoint-sm) {
+  .download {
+    padding: $padding-section-sm;
+  }
+}
 
 @media (min-width: $breakpoint-md) {
   .download {
@@ -100,6 +105,24 @@
 
     &__copy {
       font-size: 18px;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .download {
+    padding: $padding-section-xl;
+
+    &__wrapper {
+      gap: 110px;
+    }
+
+    &__title {
+      font-size: 56px;
+    }
+
+    &__copy {
+      font-size: 20px;
     }
   }
 }
