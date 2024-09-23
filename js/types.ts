@@ -108,8 +108,8 @@ export type ModalData = {
   buttonText: string;
 };
 
-/* AppData */
-export type AppData = {
+/* AppDataFromAPI */
+export type AppDataFromAPI = {
   primaryInfo: HeaderData;
   download: DownloadData;
   warranty: WarrantyData;

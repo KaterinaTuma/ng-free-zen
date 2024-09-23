@@ -8,12 +8,12 @@ import { Footer } from '../widgets/index.js';
 import { Modal } from '../widgets/index.js';
 
 /**
- * @typedef {import('../types').AppData} AppData
+ * @typedef {import('../types').AppDataFromAPI} AppDataFromAPI
  */
 
 /**
  * @function App
- * @param {AppData} data
+ * @param {AppDataFromAPI} data
  * @returns {string} HTML
  */
 
