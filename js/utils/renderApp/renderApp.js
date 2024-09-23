@@ -17,6 +17,10 @@ export const renderApp = async (lang) => {
   $root.innerHTML = Preloader();
 
   const data = await getData(lang);
+  if (!data) {
+    $root.innerHTML = '<p>Что-то пошло не так. Повторите попытку позже.</p>';
+    return;
+  }
 
   $root.innerHTML = App(data);
   addHandlers(data);
