@@ -1,4 +1,8 @@
 /_notes
 /_temp
 /node_modules
+/public
 package-lock.json
+/.firebase
+.firebaserc
+firebase.json
